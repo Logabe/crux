@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://c2gw58mhw0uys" path="res://theme.tres" id="1_8uh7m"]
 [ext_resource type="Script" uid="uid://dq6vy735rajuk" path="res://cutscene.gd" id="1_37kl0"]
+[ext_resource type="PackedScene" uid="uid://fstyjm5mmcp0" path="res://mechanics/pause_menu.tscn" id="3_iyx0m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_65f5o"]
 font_size = 48
@@ -37,3 +38,7 @@ text = "Innocent"
 layout_mode = 2
 theme_type_variation = &"GreenButton"
 text = "Guilty"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2037033913]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=250443325 instance=ExtResource("3_iyx0m")]
