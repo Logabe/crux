@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bse8xs73us18n"]
+
+[ext_resource type="Script" uid="uid://co2bico4e0hf3" path="res://button_audio.gd" id="1_jytn5"]
+[ext_resource type="Texture2D" uid="uid://dv6mj0sd2u4d6" path="res://assets/art/button_audio.png" id="2_ipb1a"]
+[ext_resource type="AudioStream" uid="uid://dggvojvbiq4w4" path="res://assets/audio/boom_sfx.ogg" id="2_o5cte"]
+
+[node name="ButtonAudio" type="Control" unique_id=210522319]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jytn5")
+
+[node name="Button" type="Button" parent="." unique_id=462012159]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_ipb1a")
+
+[node name="BoomSfx" type="AudioStreamPlayer" parent="." unique_id=2116507623]
+stream = ExtResource("2_o5cte")
+volume_db = 1.095
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
