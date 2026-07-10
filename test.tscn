@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://couxqmkb0x80k"]
+
+[ext_resource type="Theme" uid="uid://c2gw58mhw0uys" path="res://theme.tres" id="1_8uh7m"]
+[ext_resource type="Script" uid="uid://dq6vy735rajuk" path="res://cutscene.gd" id="1_37kl0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_65f5o"]
+font_size = 48
+
+[node name="Node2D" type="VBoxContainer" unique_id=2090746916 node_paths=PackedStringArray("b1", "b2")]
+offset_right = 1151.0
+offset_bottom = 653.0
+theme = ExtResource("1_8uh7m")
+theme_override_constants/separation = 64
+script = ExtResource("1_37kl0")
+b1 = NodePath("HBoxContainer/Button")
+b2 = NodePath("HBoxContainer/Button2")
+
+[node name="Label" type="Label" parent="." unique_id=493925166]
+custom_minimum_size = Vector2(0, 165.755)
+layout_mode = 2
+text = "Tung T. T. Sahur is accused of the murder of Barack Obama."
+label_settings = SubResource("LabelSettings_65f5o")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1009143481]
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=493396200]
+layout_mode = 2
+theme_type_variation = &"RedButton"
+text = "Innocent"
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1328960278]
+layout_mode = 2
+theme_type_variation = &"GreenButton"
+text = "Guilty"
