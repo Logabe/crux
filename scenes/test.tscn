@@ -17,7 +17,7 @@ b1 = NodePath("HBoxContainer/Button")
 b2 = NodePath("HBoxContainer/Button2")
 
 [node name="Label" type="Label" parent="." unique_id=493925166]
-custom_minimum_size = Vector2(0, 165.755)
+custom_minimum_size = Vector2(1152, 165.755)
 layout_mode = 2
 text = "Tung T. T. Sahur is accused of the murder of Barack Obama."
 label_settings = SubResource("LabelSettings_65f5o")

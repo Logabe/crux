@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ct2fwrs1ywpiv"]
+
+[ext_resource type="PackedScene" uid="uid://3bhalebryt54" path="res://scenes/base.tscn" id="1_eeicb"]
+
+[node name="Evidence" unique_id=1873289180 instance=ExtResource("1_eeicb")]

@@ -6,6 +6,7 @@ extends Control
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	$AnimationPlayer.play("RESET")
+	visible = false
 
 func resume():
 	get_tree().paused = false
