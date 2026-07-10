@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bu4tt81og138r"]
+
+[ext_resource type="Script" uid="uid://dr2vnp2sp0wsj" path="res://notebook.gd" id="1_iyn07"]
+
+[node name="Notebook" type="CanvasLayer" unique_id=1546100107]
+script = ExtResource("1_iyn07")
+
+[node name="NotebookIcon" type="TextureButton" parent="." unique_id=944769527]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NotebookPanel" type="Control" parent="NotebookIcon" unique_id=243872820]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Sprite2D" parent="NotebookIcon/NotebookPanel" unique_id=1992585836]
+
+[node name="LeftPage" type="Control" parent="NotebookIcon/NotebookPanel" unique_id=2066022680]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftTextEdit" type="TextEdit" parent="NotebookIcon/NotebookPanel/LeftPage" unique_id=2039562982]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+wrap_mode = 1
+
+[node name="RightPage" type="Control" parent="NotebookIcon/NotebookPanel" unique_id=919131999]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RightRichLabel" type="RichTextLabel" parent="NotebookIcon/NotebookPanel/RightPage" unique_id=1772006658]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+bbcode_enabled = true
