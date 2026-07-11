@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://hkgkwh23m62"]
+[gd_scene format=3 uid="uid://gasvaat2ypge"]
 
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_2r1qs"]
+[ext_resource type="Script" uid="uid://cgrx0i6k5fln1" path="res://scenes/scene_4.gd" id="1_mrf31"]
 
 [node name="scene_4" type="Control" unique_id=773133060]
 layout_mode = 3
@@ -9,7 +10,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mrf31")
 
 [node name="BackgroundWoodTexture" type="Sprite2D" parent="." unique_id=674437860]
 position = Vector2(800, 600)
 texture = ExtResource("1_2r1qs")
+
+[node name="Button" type="Button" parent="." unique_id=181175226]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "play vid"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
