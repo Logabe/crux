@@ -2,16 +2,50 @@
 
 [ext_resource type="PackedScene" uid="uid://3bhalebryt54" path="res://scenes/base.tscn" id="1_e23nr"]
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="2_cjh3u"]
+[ext_resource type="Theme" uid="uid://c2gw58mhw0uys" path="res://theme.tres" id="2_xcvhn"]
+[ext_resource type="PackedScene" uid="uid://d0qdekxddvcrq" path="res://mechanics/soundplayer.tscn" id="3_lon35"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjh3u"]
+content_margin_left = 8.0
+content_margin_top = 16.0
+content_margin_right = 8.0
+bg_color = Color(0.9384497, 0.9384497, 0.9384497, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Evidence" unique_id=1873289180 instance=ExtResource("1_e23nr")]
+theme = ExtResource("2_xcvhn")
 
 [node name="BackgroundWoodTexture" type="Sprite2D" parent="." index="4" unique_id=266656535]
 position = Vector2(800, 600)
 texture = ExtResource("2_cjh3u")
 
-[node name="SoundPlayer" parent="." index="5" unique_id=1729049346]
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="5" unique_id=1710269618]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 262.0
-offset_right = 493.0
-offset_bottom = 621.0
+offset_left = 1003.0
+offset_top = 226.0
+offset_right = 1547.0
+offset_bottom = 984.0
+theme_override_colors/default_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_cjh3u")
+bbcode_enabled = true
+text = "[center][font_size=48]RODNEY HUGHES[/font_size][/center]
+[font_size=36]Past criminal convictions[/font_size]
+[hr]
+[font_size=24]Simple assault[/font_size]
+Date of offense: 11/07/2017
+Penalty: 2 months inprisonment
+
+[font_size=24]Petty Theft[/font_size]
+Date of offense: 01/02/2009
+Penalty: $500 fine
+[hr]"
+
+[node name="TextureButton" parent="." index="6" unique_id=1729049346 instance=ExtResource("3_lon35")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 241.0
+offset_right = 962.0
+offset_bottom = 959.0

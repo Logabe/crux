@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b58k3qu4rltbq"]
+
+[ext_resource type="Texture2D" path="res://assets/art/AudioPlayerPip.png" id="1_gpp6f"]
+
+[node name="AudioPlayerPip" type="TextureRect" unique_id=517123681]
+custom_maximum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("1_gpp6f")
