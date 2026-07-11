@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://3bhalebryt54" path="res://scenes/base.tscn" id="1_e23nr"]
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="2_cjh3u"]
 [ext_resource type="Theme" uid="uid://c2gw58mhw0uys" path="res://theme.tres" id="2_xcvhn"]
-[ext_resource type="Texture2D" uid="uid://cyjppc6dbhk76" path="res://assets/art/BackgroundRoomWall3.png" id="3_5uf0h"]
+[ext_resource type="Texture2D" uid="uid://5o1v26pgtwr7" path="res://assets/art/BackgroundRoomWall4.png" id="3_cuwey"]
 [ext_resource type="PackedScene" uid="uid://d0qdekxddvcrq" path="res://mechanics/soundplayer.tscn" id="3_lon35"]
 [ext_resource type="AudioStream" uid="uid://bariglnnjdcnk" path="res://assets/audio/HeyStayAway.mp3" id="5_r2pi8"]
 [ext_resource type="AudioStream" uid="uid://cynm1rsojgk4p" path="res://assets/audio/Ididntwant to daysyasy.mp3" id="6_lmrsu"]
@@ -35,7 +35,7 @@ theme = ExtResource("2_xcvhn")
 modulate = Color(1, 1, 1, 0.32156864)
 position = Vector2(800, 500.99994)
 scale = Vector2(0.85999984, 0.8600001)
-texture = ExtResource("3_5uf0h")
+texture = ExtResource("3_cuwey")
 
 [node name="WoodBackground" type="Sprite2D" parent="." index="1" unique_id=1968734476]
 position = Vector2(800.24994, 1187.0625)

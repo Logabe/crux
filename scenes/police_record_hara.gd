@@ -1,6 +1,6 @@
 extends TextureButton
 
-@export var object_id: String = "policerecordrodney"
+@export var object_id: String = "witnesstestimony"
 @export var zoom_texture: Texture2D
 
 func _ready() -> void:

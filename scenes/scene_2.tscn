@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dmlxpqpi2jdm0"]
 
-[ext_resource type="Texture2D" uid="uid://cyjppc6dbhk76" path="res://assets/art/BackgroundRoomWall3.png" id="1_8egj7"]
 [ext_resource type="Script" uid="uid://dvsluhv7eg6px" path="res://scenes/scene_2.gd" id="1_unm0y"]
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_xe0r6"]
 [ext_resource type="Texture2D" uid="uid://cst3jbnjri7qa" path="res://assets/art/PhoneOff.png" id="2_02v7m"]
 [ext_resource type="Texture2D" uid="uid://cxoy38ka2y2vj" path="res://assets/art/AudioPlayerDefault.png" id="2_ccscm"]
+[ext_resource type="Texture2D" uid="uid://5o1v26pgtwr7" path="res://assets/art/BackgroundRoomWall4.png" id="2_lkfw3"]
 [ext_resource type="Texture2D" uid="uid://d0xkki8aiehwh" path="res://assets/art/PhoneOn2.png" id="3_a3h35"]
 [ext_resource type="Texture2D" uid="uid://dleywkohqd6l6" path="res://assets/art/AudioPlayerPlaying.png" id="3_qo03w"]
 [ext_resource type="Script" uid="uid://dvgkvt0cb7pip" path="res://scenes/phone.gd" id="4_a3h35"]
@@ -39,7 +39,7 @@ script = ExtResource("1_unm0y")
 modulate = Color(1, 1, 1, 0.32156864)
 position = Vector2(800, 500.99994)
 scale = Vector2(0.85999984, 0.8600001)
-texture = ExtResource("1_8egj7")
+texture = ExtResource("2_lkfw3")
 
 [node name="WoodBackground" type="Sprite2D" parent="." unique_id=669469682]
 position = Vector2(800.24994, 1187.0625)

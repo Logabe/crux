@@ -9,10 +9,29 @@ extends Node
 var i = 0 # Internal counter
 var sequence_index: int = 0 
 
-## If positive, innocent
-## If negative, guilty
-## (not implemented yet)
-var verdict : int = 0
+var guilty_votes: int = 0 
+var innocent_votes: int = 0 
+
+
+func register_vote(is_guilty: bool): 
+	if is_guilty: 
+		guilty_votes += 1
+		print("Guilty votes: ", guilty_votes)
+	else: 
+		innocent_votes += 1
+		print("Innocent votes: ", innocent_votes)
+		
+func get_final_ending() -> String: 
+	if guilty_votes > innocent_votes: 
+		return "res://scenes/ending_guilty.tscn"
+	elif innocent_votes > guilty_votes: 
+		return "res://scenes/ending_innocent.tscn"
+	else: # if there's a tie we just randomly pick 1
+		if randi() % 2 == 0: 
+			return "res://scenes/ending_guilty.tscn"
+		else: 
+			return "res://scenes/ending_innocent.tscn"
+	
 
 # Add the evidence scenes to this and they'll show up in game
 var evidence_scenes: Array[String] = [
