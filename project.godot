@@ -13,6 +13,7 @@ config_version=5
 config/name="crux"
 run/main_scene="uid://cjscq0mtrshg5"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,8 +24,8 @@ Globals="*uid://c55vc67hk1kw1"
 ClickTracker="*uid://b3oxuqg50dovh"
 ZoomPopup="*uid://caxf2x22n7gf3"
 AudioGlobal="*uid://b7c1kg8lf1q3c"
-Music="*uid://f4h3oo3wosko"
 SceneTransition="*uid://bfps55yu7kpr2"
+Music="*uid://f4h3oo3wosko"
 
 [display]
 
