@@ -3,7 +3,7 @@ extends Node
 var i = 0 # Internal counter
 
 # Add the evidence scenes to this and they'll show up in game
-var evidence_scenes = ["evidence1.tscn"]
+var evidence_scenes = ["evidence1.tscn", "scene_2.tscn", "scene_3.tscn"]
 
 func scene_number():
 	return floor(i/2)

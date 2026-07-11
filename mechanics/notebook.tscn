@@ -18,14 +18,10 @@ script = ExtResource("1_iyn07")
 
 [node name="NotebookIcon" type="TextureButton" parent="." unique_id=944769527]
 custom_maximum_size = Vector2(102, 130)
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 19.0
-offset_top = -153.0
-offset_right = 121.0
-offset_bottom = -23.0
-grow_vertical = 0
+offset_left = 29.0
+offset_top = 1044.0
+offset_right = 131.0
+offset_bottom = 1174.0
 texture_normal = ExtResource("2_pkymh")
 texture_hover = ExtResource("3_m46s0")
 stretch_mode = 0
@@ -33,12 +29,18 @@ stretch_mode = 0
 [node name="NotebookPanel" type="Control" parent="." unique_id=243872820]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -114.0
+offset_top = -13.0
+offset_right = -74.0
+offset_bottom = 27.0
 
-[node name="Background" type="Sprite2D" parent="NotebookPanel" unique_id=1992585836]
-position = Vector2(773.00006, 565)
-scale = Vector2(0.5051713, 0.5051713)
+[node name="Background" type="TextureRect" parent="NotebookPanel" unique_id=776819611]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 321.0
+offset_right = 595.0
+offset_bottom = 321.0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_m46s0")
 
 [node name="LeftPage" type="Control" parent="NotebookPanel" unique_id=2066022680]
@@ -51,10 +53,10 @@ scale = Vector2(1.6000012, 1.6000012)
 
 [node name="LeftTextEdit" type="TextEdit" parent="NotebookPanel/LeftPage" unique_id=2039562982]
 layout_mode = 0
-offset_left = 48.74996
-offset_top = 95.62492
-offset_right = 197.74997
-offset_bottom = 394.62494
+offset_left = 222.0
+offset_top = 186.0
+offset_right = 480.0
+offset_bottom = 682.0
 theme = SubResource("Theme_m46s0")
 theme_override_colors/font_color = Color(0.29218963, 0.29219028, 0.29218978, 1)
 theme_override_font_sizes/font_size = 16
@@ -74,9 +76,9 @@ scale = Vector2(1.6000012, 1.6000012)
 
 [node name="RightRichLabel" type="RichTextLabel" parent="NotebookPanel/RightPage" unique_id=1772006658]
 layout_mode = 0
-offset_left = 504.9996
-offset_top = 204.99985
-offset_right = 652.99963
-offset_bottom = 491.99985
+offset_left = 940.0
+offset_top = 369.0
+offset_right = 1219.0
+offset_bottom = 846.0
 bbcode_enabled = true
 autowrap_mode = 1

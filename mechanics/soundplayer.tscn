@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d0qdekxddvcrq"]
+
+[ext_resource type="Texture2D" uid="uid://cxoy38ka2y2vj" path="res://assets/art/AudioPlayerDefault.png" id="1_hico2"]
+[ext_resource type="Texture2D" uid="uid://dleywkohqd6l6" path="res://assets/art/AudioPlayerPlaying.png" id="2_3urmx"]
+[ext_resource type="Texture2D" uid="uid://ch8abuaykfi60" path="res://assets/art/AudioPlayerHover.png" id="2_7vsjw"]
+[ext_resource type="Script" path="res://mechanics/soundplayer.gd" id="4_o2wuf"]
+[ext_resource type="AudioStream" path="res://assets/audio/HeyStayAway.mp3" id="5_cb3mb"]
+[ext_resource type="AudioStream" path="res://assets/audio/Ididntwant to daysyasy.mp3" id="6_cb3mb"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_1ugqg"]
+
+[node name="TextureButton" type="TextureButton" unique_id=1729049346]
+offset_right = 461.0
+offset_bottom = 359.0
+toggle_mode = true
+texture_normal = ExtResource("1_hico2")
+texture_pressed = ExtResource("2_3urmx")
+texture_hover = ExtResource("2_7vsjw")
+stretch_mode = 4
+script = ExtResource("4_o2wuf")
+streams = Array[AudioStream]([ExtResource("5_cb3mb"), ExtResource("6_cb3mb")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=703970639]
+stream = SubResource("AudioStreamPlaylist_1ugqg")
+
+[node name="PipsContainer" type="HBoxContainer" parent="." unique_id=745820517]
+custom_maximum_size = Vector2(-1, 32)
+layout_mode = 0
+offset_left = 42.0
+offset_top = 598.0
+offset_right = 222.0
+offset_bottom = 629.0
+theme_override_constants/separation = -32
+
+[connection signal="toggled" from="." to="." method="interact"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="play_next"]
