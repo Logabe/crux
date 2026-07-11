@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://c2gw58mhw0uys" path="res://theme.tres" id="1_225fb"]
 [ext_resource type="Script" uid="uid://c3621jx8lavok" path="res://scenes/evidence_scene.gd" id="1_p1iy4"]
+[ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="3_t45w4"]
+[ext_resource type="Texture2D" uid="uid://w78oofi7e5an" path="res://assets/art/ArrowRightOutlinedLight.png" id="4_h5ip5"]
 
 [sub_resource type="Animation" id="Animation_t45w4"]
 length = 0.001
@@ -111,7 +113,8 @@ offset_bottom = 36.0
 grow_horizontal = 2
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=337494502]
+[node name="Button" type="TextureButton" parent="." unique_id=2140599028]
+custom_maximum_size = Vector2(187, 67)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -125,7 +128,9 @@ offset_bottom = -15.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("1_225fb")
-text = "Proceed"
+texture_normal = ExtResource("3_t45w4")
+texture_hover = ExtResource("4_h5ip5")
+stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=125511551]
 libraries/ = SubResource("AnimationLibrary_t45w4")
