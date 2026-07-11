@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bbkr8pxy8reeu" path="res://scenes/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://civcbsi7ov724" path="res://assets/art/CoverPage.png" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://ct1yejwdu57rf" path="res://assets/fonts/ks_hand.ttf" id="3_wu84c"]
+[ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="4_8ln24"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7viaw"]
+texture = ExtResource("4_8ln24")
+modulate_color = Color(1, 1, 1, 0.4509804)
 
 [node name="MainMenu" type="Node2D" unique_id=1000069436]
 script = ExtResource("1_l6cm7")
@@ -14,11 +20,15 @@ expand_mode = 1
 
 [node name="StartButton" type="Button" parent="." unique_id=964267177]
 custom_minimum_size = Vector2(300, 300)
-offset_left = 576.0
-offset_top = 864.0
-offset_right = 876.0
-offset_bottom = 1164.0
+offset_left = 632.0
+offset_top = 940.0
+offset_right = 932.0
+offset_bottom = 1240.0
 rotation = -0.30118904
-text = "Start game"
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxTexture_7viaw")
+text = "Start Game"
+autowrap_mode = 2
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
