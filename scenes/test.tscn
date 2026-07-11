@@ -4,6 +4,16 @@
 [ext_resource type="Script" uid="uid://dq6vy735rajuk" path="res://cutscene.gd" id="1_37kl0"]
 [ext_resource type="Texture2D" uid="uid://bs1hcckjhibvn" path="res://assets/art/CourtroomBg.png" id="3_74lek"]
 [ext_resource type="PackedScene" uid="uid://fstyjm5mmcp0" path="res://mechanics/pause_menu.tscn" id="3_iyx0m"]
+[ext_resource type="Texture2D" uid="uid://bju36ddu4blbk" path="res://assets/art/hospitalbill_minimized.png" id="4_jcd4p"]
+[ext_resource type="Texture2D" uid="uid://b1jjmhk5f2hqr" path="res://assets/art/hospitalbill_minimized_hover.png" id="5_uacia"]
+[ext_resource type="Script" uid="uid://cjbk82l4m11ys" path="res://scenes/police_record_hara.gd" id="6_yk7ts"]
+[ext_resource type="Texture2D" uid="uid://cicmbuagp1ux3" path="res://assets/art/PaperHospitalReport.png" id="7_yk7ts"]
+[ext_resource type="Texture2D" uid="uid://cutbbrqejw3u4" path="res://assets/art/science_briefcase.png" id="8_ajshl"]
+[ext_resource type="Texture2D" uid="uid://cpcals4u4d0uh" path="res://assets/art/science_briefcase_hover.png" id="9_ghpyy"]
+[ext_resource type="Texture2D" uid="uid://cmasrylokiywf" path="res://assets/art/PaperDNAAnalysis.png" id="10_44saj"]
+[ext_resource type="Texture2D" uid="uid://b2q4wg6yc2ylo" path="res://assets/art/witness_testimony.png" id="11_7mbro"]
+[ext_resource type="Texture2D" uid="uid://bi554o08wuc3q" path="res://assets/art/witness_testimony_hover.png" id="12_ff6ho"]
+[ext_resource type="Texture2D" uid="uid://cs33h4dg6ry8s" path="res://assets/art/PaperWitnessStatement1.png" id="13_7yos8"]
 
 [sub_resource type="SystemFont" id="SystemFont_h5ip5"]
 font_names = PackedStringArray("Serif")
@@ -110,7 +120,8 @@ _data = {
 &"fade": SubResource("Animation_74lek")
 }
 
-[node name="Node2D" type="VBoxContainer" unique_id=2090746916 node_paths=PackedStringArray("b1", "b2")]
+[node name="Node2D" type="Control" unique_id=902195594 node_paths=PackedStringArray("b1", "b2")]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -118,8 +129,6 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.45)
 theme = ExtResource("1_8uh7m")
-theme_override_constants/separation = 64
-alignment = 1
 script = ExtResource("1_37kl0")
 b1 = NodePath("HBoxContainer/Button")
 b2 = NodePath("HBoxContainer/Button2")
@@ -131,7 +140,11 @@ texture = ExtResource("3_74lek")
 
 [node name="Label" type="Label" parent="." unique_id=493925166]
 custom_minimum_size = Vector2(897, 0)
-layout_mode = 2
+layout_mode = 0
+offset_left = 351.0
+offset_top = 429.0
+offset_right = 1248.0
+offset_bottom = 465.0
 size_flags_horizontal = 4
 text = "Harakore Smith is accused of the murder of Rodney Bentley"
 label_settings = SubResource("LabelSettings_65f5o")
@@ -139,7 +152,11 @@ horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1009143481]
 custom_minimum_size = Vector2(332, 57)
-layout_mode = 2
+layout_mode = 0
+offset_left = 634.0
+offset_top = 529.0
+offset_right = 966.0
+offset_bottom = 586.0
 size_flags_horizontal = 4
 theme_override_constants/separation = 80
 
@@ -154,6 +171,51 @@ visible = false
 layout_mode = 2
 theme_type_variation = &"RedButton"
 text = "Guilty"
+
+[node name="HospitalReport" type="TextureButton" parent="." unique_id=1499063774]
+modulate = Color(0.4336509, 0.43365085, 0.43365085, 1)
+layout_mode = 0
+offset_left = 515.0
+offset_top = 834.0
+offset_right = 765.0
+offset_bottom = 1334.0
+scale = Vector2(0.2, 0.2)
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_jcd4p")
+texture_hover = ExtResource("5_uacia")
+script = ExtResource("6_yk7ts")
+object_id = "hospitalnote"
+zoom_texture = ExtResource("7_yk7ts")
+
+[node name="DNAReport" type="TextureButton" parent="." unique_id=2007625234]
+modulate = Color(0.4336509, 0.43365085, 0.43365085, 1)
+layout_mode = 0
+offset_left = 1026.0
+offset_top = 969.0
+offset_right = 1426.0
+offset_bottom = 1469.0
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 4
+texture_normal = ExtResource("8_ajshl")
+texture_hover = ExtResource("9_ghpyy")
+script = ExtResource("6_yk7ts")
+object_id = "hospitalnote"
+zoom_texture = ExtResource("10_44saj")
+
+[node name="WitnessTestimony" type="TextureButton" parent="." unique_id=326418129]
+modulate = Color(0.4336509, 0.43365085, 0.43365085, 1)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 771.0
+offset_right = 1375.0
+offset_bottom = 1271.0
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 4
+texture_normal = ExtResource("11_7mbro")
+texture_hover = ExtResource("12_ff6ho")
+script = ExtResource("6_yk7ts")
+object_id = "hospitalnote"
+zoom_texture = ExtResource("13_7yos8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2037033913]
 
