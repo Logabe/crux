@@ -4,8 +4,12 @@
 [ext_resource type="Script" uid="uid://dq6vy735rajuk" path="res://cutscene.gd" id="1_37kl0"]
 [ext_resource type="PackedScene" uid="uid://fstyjm5mmcp0" path="res://mechanics/pause_menu.tscn" id="3_iyx0m"]
 
+[sub_resource type="SystemFont" id="SystemFont_h5ip5"]
+font_names = PackedStringArray("Serif")
+
 [sub_resource type="LabelSettings" id="LabelSettings_65f5o"]
-font_size = 48
+font = SubResource("SystemFont_h5ip5")
+font_size = 24
 
 [sub_resource type="Animation" id="Animation_iyx0m"]
 length = 0.001
@@ -111,17 +115,17 @@ offset_bottom = 653.0
 pivot_offset_ratio = Vector2(0.5, 0.45)
 theme = ExtResource("1_8uh7m")
 theme_override_constants/separation = 64
+alignment = 1
 script = ExtResource("1_37kl0")
 b1 = NodePath("HBoxContainer/Button")
 b2 = NodePath("HBoxContainer/Button2")
 
 [node name="Label" type="Label" parent="." unique_id=493925166]
-custom_minimum_size = Vector2(1152, 165.755)
+custom_minimum_size = Vector2(674, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Soup S.S. Sahur is accused of the murder of Barack Obama."
 label_settings = SubResource("LabelSettings_65f5o")
-horizontal_alignment = 1
-autowrap_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1009143481]
 custom_minimum_size = Vector2(270, 50)
