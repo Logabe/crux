@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dboi7kx6scr5s"]
+
+[ext_resource type="Texture2D" uid="uid://celorva5hhib1" path="res://assets/art/CCTVBackground.png" id="1_fyutw"]
+[ext_resource type="Texture2D" uid="uid://d2snhp1tcwi8p" path="res://assets/art/SilohuetteTalking.png" id="2_vul3o"]
+[ext_resource type="Texture2D" uid="uid://p3fs0hmi4mba" path="res://assets/art/SilohuetteTalking2.png" id="3_2m4bb"]
+[ext_resource type="Texture2D" uid="uid://cshutiud0b22w" path="res://assets/art/SilohuettePointing.png" id="4_5522o"]
+[ext_resource type="Texture2D" uid="uid://ifkiqw5rw0o5" path="res://assets/art/SilohuetteStabby.png" id="5_804xd"]
+[ext_resource type="Texture2D" uid="uid://drpkvm32nwhj5" path="res://assets/art/CCTVBrokenScreen.png" id="6_1w8sq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1vivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vul3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2m4bb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5522o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_804xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1w8sq")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="VideoPlayer" type="Control" unique_id=1312506415]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="." unique_id=47405347]
+texture = ExtResource("1_fyutw")
+centered = false
+
+[node name="Overlayed" type="AnimatedSprite2D" parent="." unique_id=152471513]
+sprite_frames = SubResource("SpriteFrames_1vivr")
+autoplay = "default"
+centered = false
