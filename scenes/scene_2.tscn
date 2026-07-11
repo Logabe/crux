@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmlxpqpi2jdm0"]
 
-[ext_resource type="Texture2D" uid="uid://dyexpse2n47pm" path="res://assets/art/BackgroundRoomWall2.png" id="1_8egj7"]
+[ext_resource type="Texture2D" uid="uid://cyjppc6dbhk76" path="res://assets/art/BackgroundRoomWall3.png" id="1_8egj7"]
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_xe0r6"]
 [ext_resource type="Texture2D" uid="uid://cst3jbnjri7qa" path="res://assets/art/PhoneOff.png" id="2_02v7m"]
 [ext_resource type="Texture2D" uid="uid://cxoy38ka2y2vj" path="res://assets/art/AudioPlayerDefault.png" id="2_ccscm"]
@@ -10,9 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://ch8abuaykfi60" path="res://assets/art/AudioPlayerHover.png" id="4_is556"]
 [ext_resource type="Texture2D" uid="uid://djvr1t3svae4g" path="res://assets/art/TapeLabelRodney.png" id="5_yun4j"]
 [ext_resource type="Script" uid="uid://cgt3stllmrv4i" path="res://scenes/crowd_voice.gd" id="8_ul8a6"]
-[ext_resource type="AudioStream" uid="uid://dggvojvbiq4w4" path="res://assets/audio/boom_sfx.ogg" id="9_41217"]
 [ext_resource type="PackedScene" uid="uid://bu4tt81og138r" path="res://mechanics/notebook.tscn" id="10_nb8vq"]
 [ext_resource type="PackedScene" uid="uid://fstyjm5mmcp0" path="res://mechanics/pause_menu.tscn" id="11_a3h35"]
+[ext_resource type="AudioStream" uid="uid://c1vb1lbgopsaq" path="res://assets/audio/Are you sure.ogg" id="11_vlvxn"]
+[ext_resource type="AudioStream" uid="uid://dieltdgjqgf4w" path="res://assets/audio/thats hard to believe.ogg" id="12_bt1fo"]
+[ext_resource type="AudioStream" uid="uid://bif3kgnklcchq" path="res://assets/audio/I dont see how.ogg" id="13_0xl4q"]
+[ext_resource type="AudioStream" uid="uid://c6oqloetan5id" path="res://assets/audio/oh hes a greeeaaatttt person.ogg" id="14_oyiwn"]
 
 [node name="Scene2" type="Control" unique_id=1981619829]
 layout_mode = 3
@@ -22,11 +25,6 @@ anchor_bottom = 1.0
 offset_right = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Notebook" parent="." unique_id=1546100107 instance=ExtResource("10_nb8vq")]
-layer = 5
-offset = Vector2(0, 500)
-transform = Transform2D(1, 0, 0, 1, 0, 500)
 
 [node name="BackgroundRoomWall" type="Sprite2D" parent="." unique_id=1390783331]
 modulate = Color(1, 1, 1, 0.32156864)
@@ -76,12 +74,25 @@ texture_hover = ExtResource("4_is556")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_ul8a6")
+audio_clips = Array[AudioStream]([ExtResource("11_vlvxn"), ExtResource("12_bt1fo"), ExtResource("13_0xl4q"), ExtResource("14_oyiwn")])
+transcripts = Array[String](["Are you sure it was him?", "That's hard to believe.", "I don't see how Harakore could have done this.", "Oh, he's a great person!"])
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="CrowdVoice" unique_id=1628070575]
+
+[node name="TranscriptLabel" type="Label" parent="CrowdVoice" unique_id=838996367]
+layout_mode = 0
+offset_left = -158.805
+offset_top = 11.0
+offset_right = -6.8049927
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 30
 
 [node name="PauseMenu" parent="." unique_id=250443325 instance=ExtResource("11_a3h35")]
 z_index = 10
 layout_mode = 1
 
-[node name="BoomSfx" type="AudioStreamPlayer" parent="." unique_id=1816690310]
-stream = ExtResource("9_41217")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=791716204]
+
+[node name="Notebook" parent="CanvasLayer" unique_id=1546100107 instance=ExtResource("10_nb8vq")]
 
 [connection signal="toggled" from="CrowdVoice" to="Phone" method="_on_crowd_voice_toggled"]

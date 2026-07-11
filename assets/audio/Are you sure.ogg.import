@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1vb1lbgopsaq"
+path="res://.godot/imported/Are you sure.ogg-c2ac5104562ed4ce6facf8d8705871d2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/Are you sure.ogg"
+dest_files=["res://.godot/imported/Are you sure.ogg-c2ac5104562ed4ce6facf8d8705871d2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
