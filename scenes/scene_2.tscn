@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dmlxpqpi2jdm0"]
 
 [ext_resource type="Texture2D" uid="uid://cyjppc6dbhk76" path="res://assets/art/BackgroundRoomWall3.png" id="1_8egj7"]
+[ext_resource type="Script" uid="uid://dvsluhv7eg6px" path="res://scenes/scene_2.gd" id="1_unm0y"]
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_xe0r6"]
 [ext_resource type="Texture2D" uid="uid://cst3jbnjri7qa" path="res://assets/art/PhoneOff.png" id="2_02v7m"]
 [ext_resource type="Texture2D" uid="uid://cxoy38ka2y2vj" path="res://assets/art/AudioPlayerDefault.png" id="2_ccscm"]
@@ -19,7 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://doq3bkx2ikxu7" path="res://assets/art/minimized_policerecord_default.png" id="15_oyiwn"]
 [ext_resource type="Texture2D" uid="uid://ckn4mq5pw8ese" path="res://assets/art/minimized_policerecord_hover.png" id="16_8igo0"]
 [ext_resource type="Script" uid="uid://cjbk82l4m11ys" path="res://scenes/police_record_hara.gd" id="17_i44rj"]
-[ext_resource type="PackedScene" uid="uid://c1t6mi2pdh70q" path="res://mechanics/transition_button.tscn" id="20_8igo0"]
+[ext_resource type="Texture2D" uid="uid://dwoqyubfkp05t" path="res://assets/art/ArrowRightDefault.png" id="21_lkfw3"]
+[ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="22_xaq16"]
+[ext_resource type="Texture2D" uid="uid://w78oofi7e5an" path="res://assets/art/ArrowRightOutlinedLight.png" id="23_sivv1"]
 
 [node name="Scene2" type="Control" unique_id=1981619829]
 layout_mode = 3
@@ -29,9 +32,7 @@ anchor_bottom = 1.0
 offset_right = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TransitionButton" parent="." unique_id=836348835 instance=ExtResource("20_8igo0")]
-layout_mode = 1
+script = ExtResource("1_unm0y")
 
 [node name="BackgroundRoomWall" type="Sprite2D" parent="." unique_id=1390783331]
 modulate = Color(1, 1, 1, 0.32156864)
@@ -82,7 +83,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_ul8a6")
 audio_clips = Array[AudioStream]([ExtResource("11_vlvxn"), ExtResource("12_bt1fo"), ExtResource("13_0xl4q"), ExtResource("14_oyiwn")])
-transcripts = Array[String](["Are you sure it was him?", "That's hard to believe.", "I don't see how Harakore could have done this.", "Oh, he's a great person!"])
+transcripts = Array[String](["[1/4] Are you sure it was him?", "[2/4] That's hard to believe.", "[3/4]  don't see how Harakore could have done this.", "[4/4] Oh, he's a great person!"])
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="CrowdVoice" unique_id=1628070575]
 
@@ -112,5 +113,25 @@ layout_mode = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=791716204]
 
 [node name="Notebook" parent="CanvasLayer" unique_id=1546100107 instance=ExtResource("10_nb8vq")]
+
+[node name="ProgressLabel" type="Label" parent="." unique_id=1176306837]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TransitionButton" type="TextureButton" parent="." unique_id=660065598]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -374.0
+offset_top = -134.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("23_sivv1")
+texture_pressed = ExtResource("21_lkfw3")
+texture_hover = ExtResource("22_xaq16")
 
 [connection signal="toggled" from="CrowdVoice" to="Phone" method="_on_crowd_voice_toggled"]
