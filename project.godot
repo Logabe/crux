@@ -27,6 +27,8 @@ ZoomPopup="*uid://caxf2x22n7gf3"
 
 window/size/viewport_width=1600
 window/size/viewport_height=1200
+window/size/window_width_override=1000
+window/size/window_height_override=750
 window/stretch/mode="canvas_items"
 
 [input]
