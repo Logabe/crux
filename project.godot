@@ -12,13 +12,14 @@ config_version=5
 
 config/name="crux"
 run/main_scene="uid://couxqmkb0x80k"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Notebook="*uid://bu4tt81og138r"
 EvidenceTracker="*uid://sqj6ilm1oe1y"
+Globals="*uid://c55vc67hk1kw1"
 
 [display]
 
