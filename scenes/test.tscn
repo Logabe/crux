@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://c2gw58mhw0uys" path="res://theme.tres" id="1_8uh7m"]
 [ext_resource type="Script" uid="uid://dq6vy735rajuk" path="res://cutscene.gd" id="1_37kl0"]
+[ext_resource type="Texture2D" uid="uid://bs1hcckjhibvn" path="res://assets/art/CourtroomBg.png" id="3_74lek"]
 [ext_resource type="PackedScene" uid="uid://fstyjm5mmcp0" path="res://mechanics/pause_menu.tscn" id="3_iyx0m"]
 
 [sub_resource type="SystemFont" id="SystemFont_h5ip5"]
@@ -122,6 +123,10 @@ alignment = 1
 script = ExtResource("1_37kl0")
 b1 = NodePath("HBoxContainer/Button")
 b2 = NodePath("HBoxContainer/Button2")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1357329424]
+position = Vector2(799, 601)
+texture = ExtResource("3_74lek")
 
 [node name="Label" type="Label" parent="." unique_id=493925166]
 custom_minimum_size = Vector2(897, 0)
