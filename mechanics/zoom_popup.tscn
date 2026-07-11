@@ -2,14 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c2t7jlaomhysn" path="res://zoom_popup.gd" id="1_n56j7"]
 
-[node name="ZoomPopup" type="Control" unique_id=1157733639]
-z_index = 10
-layout_mode = 3
-anchors_preset = 0
+[node name="ZoomPopup" type="CanvasLayer" unique_id=854609975]
 script = ExtResource("1_n56j7")
 
 [node name="DimBackground" type="ColorRect" parent="." unique_id=1341423151]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,7 +15,6 @@ color = Color(0, 0, 0, 0.39215687)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1523114784]
 custom_minimum_size = Vector2(150, 150)
-layout_mode = 1
 offset_right = 200.0
 offset_bottom = 300.0
 tile_scroll_hint = true

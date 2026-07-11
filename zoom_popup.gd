@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var dim_bg: ColorRect = $DimBackground
 @onready var scroll_container: ScrollContainer = $ScrollContainer
