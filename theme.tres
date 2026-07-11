@@ -1,21 +1,21 @@
 [gd_resource type="Theme" format=3 uid="uid://c2gw58mhw0uys"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvktn"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
 bg_color = Color(0.04107885, 0.4206134, 0.005513281, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uh7m"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
 bg_color = Color(0.99, 0.019799981, 0.19767007, 1)
 
 [resource]
-Button/font_sizes/font_size = 24
+Button/font_sizes/font_size = 32
 GreenButton/base_type = &"Button"
 GreenButton/styles/normal = SubResource("StyleBoxFlat_wvktn")
 RedButton/base_type = &"Button"
