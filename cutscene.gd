@@ -24,5 +24,7 @@ func _ready() -> void:
 	var bg_tween = create_tween()
 	bg_tween.tween_property(background_sprite, "modulate:a", 2.0, 3.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
-func go_to_next():
-	Globals.go_to_next()
+	
+
+#func go_to_next():
+	#Globals.go_to_next()
