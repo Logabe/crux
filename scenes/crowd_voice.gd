@@ -40,12 +40,12 @@ func _on_audio_finished() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-#func _on_pressed() -> void:
-	#$BoomSfx.play()
-	var sfx = AudioStreamPlayer.new()
-	add_child(sfx)
-	sfx.stream = AudioGlobal.radio_click_sound
-	sfx.play()
-	await sfx.finished
-	sfx.queue_free()
+#
+##func _on_pressed() -> void:
+	##$BoomSfx.play()
+	#var sfx = AudioStreamPlayer.new()
+	#add_child(sfx)
+	#sfx.stream = AudioGlobal.radio_click_sound
+	#sfx.play()
+	#await sfx.finished
+	#sfx.queue_free()
