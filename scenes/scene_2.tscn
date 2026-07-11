@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dwoqyubfkp05t" path="res://assets/art/ArrowRightDefault.png" id="21_lkfw3"]
 [ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="22_xaq16"]
 [ext_resource type="Texture2D" uid="uid://w78oofi7e5an" path="res://assets/art/ArrowRightOutlinedLight.png" id="23_sivv1"]
+[ext_resource type="Script" uid="uid://cae4l33madkkp" path="res://scenes/transition_button.gd" id="25_xaq16"]
 
 [node name="Scene2" type="Control" unique_id=1981619829]
 layout_mode = 3
@@ -129,3 +130,6 @@ grow_vertical = 0
 texture_normal = ExtResource("23_sivv1")
 texture_pressed = ExtResource("21_lkfw3")
 texture_hover = ExtResource("22_xaq16")
+script = ExtResource("25_xaq16")
+
+[connection signal="pressed" from="TransitionButton" to="TransitionButton" method="_on_pressed"]

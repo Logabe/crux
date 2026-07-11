@@ -8,8 +8,10 @@ extends Control
 func _ready() -> void:
 	background_sprite.visible = false 
 	background_sprite.modulate.a = 0.0 # fully ransparent at the start
-	b1.pressed.connect($AnimationPlayer.play.bind("fade"))
-	b2.pressed.connect($AnimationPlayer.play.bind("fade"))
+	#b1.pressed.connect($AnimationPlayer.play.bind("fade"))
+	#b2.pressed.connect($AnimationPlayer.play.bind("fade"))
+	b1.pressed.connect(_on_choice_made)
+	b2.pressed.connect(_on_choice_made)
 	$Label.visible_characters = 0
 	var tween = create_tween()
 	tween.tween_property($Label, "visible_characters", len($Label.text), len($Label.text) * 0.05)
@@ -22,7 +24,12 @@ func _ready() -> void:
 	
 	background_sprite.visible = true
 	var bg_tween = create_tween()
-	bg_tween.tween_property(background_sprite, "modulate:a", 2.0, 3.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	bg_tween.tween_property(background_sprite, "modulate:a", 1.0, 3.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
-func go_to_next():
+	
+func _on_choice_made() -> void:
+	$AnimationPlayer.play("fade")
+	await $AnimationPlayer.animation_finished
 	Globals.go_to_next()
+#func go_to_next():
+	#Globals.go_to_next()

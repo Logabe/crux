@@ -15,3 +15,8 @@ func _on_first_click_registered(object_name: String, total_count: int) -> void:
 
 	if total_count >= required_clicks:
 		next_arrow.visible = true
+		
+
+
+func _on_transition_button_toggled(toggled_on: bool) -> void:
+	pass # Replace with function body.
