@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var panel: Control = $NotebookPanel
 @onready var left_text: TextEdit = $NotebookPanel/LeftPage/LeftTextEdit
 @onready var right_label: RichTextLabel = $NotebookPanel/RightPage/RightRichLabel
+@onready var sfx : AudioStreamPlayer = $AudioStreamPlayer
 
 var is_open: bool = false
 
