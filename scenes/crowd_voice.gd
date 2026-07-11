@@ -43,3 +43,9 @@ func _process(delta: float) -> void:
 
 #func _on_pressed() -> void:
 	#$BoomSfx.play()
+	var sfx = AudioStreamPlayer.new()
+	add_child(sfx)
+	sfx.stream = AudioGlobal.radio_click_sound
+	sfx.play()
+	await sfx.finished
+	sfx.queue_free()

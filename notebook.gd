@@ -31,6 +31,7 @@ func _on_icon_pressed() -> void:
 		open_notebook()
 
 func open_notebook() -> void:
+	play_sfx()
 	panel.visible = true
 	panel.modulate.a = 0.0
 	panel.scale = Vector2(0.8, 0.8)
@@ -71,6 +72,13 @@ func _flash_icon_notification() -> void:
 	if icon.has_node("NotificationDot"):
 		icon.get_node("NotificationDot").visible = true # notification dot to notify player of updates to notebook
 		
+func play_sfx() -> void:
+	var sfx = AudioStreamPlayer.new()
+	add_child(sfx)
+	sfx.stream = AudioGlobal.paper_rustle_audios.pick_random()
+	sfx.play()
+	await sfx.finished
+	sfx.queue_free()
 
 """
 now if we want to add anything to the notebook automatically, 
