@@ -1,7 +1,9 @@
 extends Control
 
 @onready var dim_bg: ColorRect = $DimBackground
-@onready var zoomed_texture: TextureRect = $ZoomedTextureRect
+@onready var scroll_container: ScrollContainer = $ScrollContainer
+@onready var zoomed_texture: TextureRect = $ScrollContainer/ZoomedTextureRect
+
 
 var current_source_button: BaseButton = null
 
@@ -13,12 +15,17 @@ func _ready() -> void:
 func show_zoom(texture: Texture2D, source_button: BaseButton = null) -> void:
 	current_source_button = source_button
 	zoomed_texture.texture = texture
+
+	# Let the TextureRect be exactly the texture's native size —
+	# ScrollContainer will handle showing scrollbars if it's taller than the viewport
+	zoomed_texture.custom_minimum_size = texture.get_size()
+	zoomed_texture.size = texture.get_size()
+
 	visible = true
-	zoomed_texture.scale = Vector2(0.8, 0.8)
-	zoomed_texture.modulate.a = 0.0
-	var tween := create_tween().set_parallel(true)
-	tween.tween_property(zoomed_texture, "scale", Vector2.ONE, 0.15).set_trans(Tween.TRANS_BACK)
-	tween.tween_property(zoomed_texture, "modulate:a", 1.0, 0.15)
+	scroll_container.scroll_vertical = 0 # reset scroll position each time it opens
+	scroll_container.modulate.a = 0.0
+	var tween := create_tween()
+	tween.tween_property(scroll_container, "modulate:a", 1.0, 0.15)
 
 func hide_zoom() -> void:
 	visible = false
@@ -26,7 +33,7 @@ func hide_zoom() -> void:
 	if current_source_button and current_source_button.button_pressed:
 		current_source_button.set_pressed_no_signal(false)
 	current_source_button = null
-	
+
 
 func _on_background_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
