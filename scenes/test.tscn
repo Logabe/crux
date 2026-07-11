@@ -127,7 +127,7 @@ b2 = NodePath("HBoxContainer/Button2")
 custom_minimum_size = Vector2(897, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Soup S.S. Sahur is accused of the murder of Barack Obama."
+text = "Harakore Smith is accused of the murder of Rodney Bentley"
 label_settings = SubResource("LabelSettings_65f5o")
 horizontal_alignment = 1
 

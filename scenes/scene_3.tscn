@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://3bhalebryt54" path="res://scenes/base.tscn" id="1_e23nr"]
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="2_cjh3u"]
-[ext_resource type="PackedScene" uid="uid://cufgn12lpe0hb" path="res://mechanics/soundplayer.tscn" id="3_lon35"]
 
 [node name="Evidence" unique_id=1873289180 instance=ExtResource("1_e23nr")]
 
@@ -10,7 +9,7 @@
 position = Vector2(800, 600)
 texture = ExtResource("2_cjh3u")
 
-[node name="SoundPlayer" parent="." index="5" unique_id=1729049346 instance=ExtResource("3_lon35")]
+[node name="SoundPlayer" parent="." index="5" unique_id=1729049346]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 262.0
