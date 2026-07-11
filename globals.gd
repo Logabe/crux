@@ -9,6 +9,11 @@ extends Node
 var i = 0 # Internal counter
 var sequence_index: int = 0 
 
+## If positive, innocent
+## If negative, guilty
+## (not implemented yet)
+var verdict : int = 0
+
 # Add the evidence scenes to this and they'll show up in game
 var evidence_scenes: Array[String] = [
 	"res://scenes/scene_2.tscn", 
