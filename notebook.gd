@@ -8,6 +8,7 @@ extends CanvasLayer
 var is_open: bool = false
 
 func _ready() -> void:
+	visible = false
 	left_text.add_theme_color_override("font_color", Color(0.1, 0.1, 0.1)) # dark ink
 	left_text.add_theme_color_override("font_selected_color", Color(1, 1, 1))
 	left_text.add_theme_color_override("font_placeholder_color", Color(0.5, 0.5, 0.5, 0.6))
