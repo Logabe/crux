@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cjscq0mtrshg5"]
+
+[ext_resource type="Script" uid="uid://bbkr8pxy8reeu" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://civcbsi7ov724" path="res://assets/art/CoverPage.png" id="2_ekxnf"]
+
+[node name="MainMenu" type="Node2D" unique_id=1000069436]
+script = ExtResource("1_l6cm7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1902231395]
+offset_right = 1596.0
+offset_bottom = 1205.0
+texture = ExtResource("2_ekxnf")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=964267177]
+custom_minimum_size = Vector2(300, 300)
+offset_left = 576.0
+offset_top = 864.0
+offset_right = 876.0
+offset_bottom = 1164.0
+rotation = -0.30118904
+text = "Start game"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
