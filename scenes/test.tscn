@@ -125,6 +125,7 @@ b1 = NodePath("HBoxContainer/Button")
 b2 = NodePath("HBoxContainer/Button2")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1357329424]
+self_modulate = Color(0.23392546, 0.23392546, 0.23392543, 1)
 position = Vector2(799, 601)
 texture = ExtResource("3_74lek")
 

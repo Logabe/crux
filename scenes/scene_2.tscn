@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://ch8abuaykfi60" path="res://assets/art/AudioPlayerHover.png" id="4_is556"]
 [ext_resource type="Texture2D" uid="uid://djvr1t3svae4g" path="res://assets/art/TapeLabelRodney.png" id="5_yun4j"]
 [ext_resource type="Script" uid="uid://cgt3stllmrv4i" path="res://scenes/crowd_voice.gd" id="8_ul8a6"]
-[ext_resource type="PackedScene" uid="uid://bu4tt81og138r" path="res://mechanics/notebook.tscn" id="10_nb8vq"]
 [ext_resource type="PackedScene" uid="uid://fstyjm5mmcp0" path="res://mechanics/pause_menu.tscn" id="11_a3h35"]
 [ext_resource type="AudioStream" uid="uid://c1vb1lbgopsaq" path="res://assets/audio/Are you sure.ogg" id="11_vlvxn"]
 [ext_resource type="AudioStream" uid="uid://dieltdgjqgf4w" path="res://assets/audio/thats hard to believe.ogg" id="12_bt1fo"]
@@ -110,8 +109,6 @@ zoom_texture = ExtResource("19_lkfw3")
 [node name="PauseMenu" parent="." unique_id=250443325 instance=ExtResource("11_a3h35")]
 z_index = 10
 layout_mode = 1
-
-[node name="Notebook" parent="." unique_id=1546100107 instance=ExtResource("10_nb8vq")]
 
 [node name="ProgressLabel" type="Label" parent="." unique_id=1176306837]
 layout_mode = 0
