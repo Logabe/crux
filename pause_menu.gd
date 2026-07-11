@@ -41,3 +41,9 @@ func _on_options_pressed():
 func _on_restart_pressed():
 	resume()
 	get_tree().reload_current_scene()
+	
+	Globals.reset_game()
+	ClickTracker.reset()
+	Notebook.reset_notes()
+	
+	SceneTransition.goto_scene("res://scenes/main_menu.tscn")

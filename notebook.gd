@@ -80,6 +80,10 @@ func play_sfx() -> void:
 	await sfx.finished
 	sfx.queue_free()
 
+func reset_notes() -> void:
+	left_text.text = ""
+	right_label.text = ""
+
 """
 now if we want to add anything to the notebook automatically, 
 all we have to do is: 

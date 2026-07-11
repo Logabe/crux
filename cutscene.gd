@@ -15,12 +15,11 @@ func _ready() -> void:
 	dna_report.visible = false
 	hospital_report.visible = false 
 	witness_testimony.visible = false 
-	background_sprite.modulate.a = 0.0 # fully ransparent at the start
-	#b1.pressed.connect($AnimationPlayer.play.bind("fade"))
-	#b2.pressed.connect($AnimationPlayer.play.bind("fade"))
-	b1.pressed.connect(_on_choice_made)
-	b2.pressed.connect(_on_choice_made)
+	background_sprite.modulate.a = 0.0
+	b1.pressed.connect(_on_innocent_pressed) # b1 is innocent per your comment
+	b2.pressed.connect(_on_guilty_pressed)   # b2 is guilty per your comment
 	$Label.visible_characters = 0
+	
 	var tween = create_tween()
 	tween.tween_property($Label, "visible_characters", len($Label.text), len($Label.text) * 0.05)
 	await tween.finished
@@ -61,8 +60,7 @@ func _on_choice_made() -> void:
 	await $AnimationPlayer.animation_finished
 	
 	if Globals.sequence_index >= Globals.evidence_scenes.size(): 
-		var ending_path := Globals.get_final_ending()
-		SceneTransition.goto_scene(ending_path)
+		SceneTransition.goto_scene("res://scenes/ending_sequence.tscn")
 	else: 
 		Globals.go_to_next()
 #func go_to_next():

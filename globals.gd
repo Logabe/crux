@@ -49,13 +49,15 @@ func scene_display_number():
 	return scene_number() + 1
 
 func go_to_next():
-	if sequence_index < evidence_scenes.size():
-		var next_scene: String = evidence_scenes[sequence_index]
-		sequence_index += 1
-		SceneTransition.goto_scene(next_scene)
-	else:
-		# all 4 evidence scenes done — go wherever the game goes after this loop
-		SceneTransition.goto_scene("res://final_scene.tscn") # adjust to whatever comes next
+	var next_scene: String = evidence_scenes[sequence_index]
+	sequence_index += 1
+	SceneTransition.goto_scene(next_scene)
 
 func return_to_original(): 
 	SceneTransition.goto_scene(original_scene_path)
+
+func reset_game(): 
+	sequence_index = 0 
+	guilty_votes = 0 
+	innocent_votes = 0 
+	i = 0 

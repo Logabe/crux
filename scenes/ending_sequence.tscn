@@ -2,5 +2,14 @@
 
 [ext_resource type="Script" uid="uid://d0mu0iclx86fk" path="res://scenes/ending_sequence.gd" id="1_1usih"]
 
-[node name="EndingSequence" type="Node2D" unique_id=1282559851]
+[node name="EndingSequence" type="Control" unique_id=444899603]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_1usih")
+
+[node name="DisplayRect" type="TextureRect" parent="." unique_id=1818545629]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(1600, 1200)
+layout_mode = 1
+offset_right = 1600.0
+offset_bottom = 1200.0
