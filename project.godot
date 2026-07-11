@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Notebook="*uid://bu4tt81og138r"
+EvidenceTracker="*uid://sqj6ilm1oe1y"
 
 [display]
 

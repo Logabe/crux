@@ -8,6 +8,14 @@ extends CanvasLayer
 var is_open: bool = false
 
 func _ready() -> void:
+	left_text.add_theme_color_override("font_color", Color(0.1, 0.1, 0.1)) # dark ink
+	left_text.add_theme_color_override("font_selected_color", Color(1, 1, 1))
+	left_text.add_theme_color_override("font_placeholder_color", Color(0.5, 0.5, 0.5, 0.6))
+	
+	var handwriting_font := load("res://assets/fonts/ks_hand.ttf")
+	left_text.add_theme_font_override("font", handwriting_font)
+	left_text.add_theme_font_size_override("font_size", 22)
+	
 	panel.visible = false
 	icon.pressed.connect(_on_icon_pressed)
 
