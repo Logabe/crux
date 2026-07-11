@@ -4,7 +4,6 @@ extends CanvasLayer
 @onready var panel: Control = $NotebookPanel
 @onready var left_text: TextEdit = $NotebookPanel/LeftPage/LeftTextEdit
 @onready var right_label: RichTextLabel = $NotebookPanel/RightPage/RightRichLabel
-@onready var sfx : AudioStreamPlayer = $AudioStreamPlayer
 
 var is_open: bool = false
 
@@ -74,7 +73,12 @@ func _flash_icon_notification() -> void:
 		icon.get_node("NotificationDot").visible = true # notification dot to notify player of updates to notebook
 		
 func play_sfx() -> void:
-	pass
+	var sfx = AudioStreamPlayer.new()
+	add_child(sfx)
+	sfx.stream = AudioGlobal.paper_rustle_audios.pick_random()
+	sfx.play()
+	await sfx.finished
+	sfx.queue_free()
 
 """
 now if we want to add anything to the notebook automatically, 

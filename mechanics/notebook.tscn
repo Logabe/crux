@@ -70,5 +70,3 @@ offset_top = 172.0
 offset_right = 767.0
 offset_bottom = 459.0
 bbcode_enabled = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=317565660]
