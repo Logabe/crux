@@ -11,4 +11,6 @@ Everyone has a story to tell. To discover the truth... well, that is up to you.
 
 Welcome to...
 
-## **The Crux Of Storytelling.**
+**The Crux Of Storytelling.**
+
+![](/assets/art/example_image.png "Title screen")
