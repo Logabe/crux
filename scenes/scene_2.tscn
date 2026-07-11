@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_xe0r6"]
 [ext_resource type="Texture2D" uid="uid://cst3jbnjri7qa" path="res://assets/art/PhoneOff.png" id="2_02v7m"]
 [ext_resource type="Texture2D" uid="uid://cxoy38ka2y2vj" path="res://assets/art/AudioPlayerDefault.png" id="2_ccscm"]
-[ext_resource type="Texture2D" uid="uid://x3dqk0lcfh7k" path="res://assets/art/PhoneOn.png" id="3_mejfh"]
+[ext_resource type="Texture2D" uid="uid://d0xkki8aiehwh" path="res://assets/art/PhoneOn2.png" id="3_a3h35"]
 [ext_resource type="Texture2D" uid="uid://dleywkohqd6l6" path="res://assets/art/AudioPlayerPlaying.png" id="3_qo03w"]
 [ext_resource type="Script" uid="uid://dvgkvt0cb7pip" path="res://scenes/phone.gd" id="4_a3h35"]
 [ext_resource type="Texture2D" uid="uid://ch8abuaykfi60" path="res://assets/art/AudioPlayerHover.png" id="4_is556"]
@@ -39,12 +39,12 @@ offset_bottom = 614.30725
 rotation = 0.1854537
 toggle_mode = true
 texture_normal = ExtResource("2_02v7m")
-texture_pressed = ExtResource("3_mejfh")
+texture_pressed = ExtResource("3_a3h35")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_a3h35")
 object_id = null
-zoom_texture = ExtResource("3_mejfh")
+zoom_texture = ExtResource("3_a3h35")
 
 [node name="TapeLabelRodney" type="Sprite2D" parent="." unique_id=1493112667]
 position = Vector2(1037, 340)
