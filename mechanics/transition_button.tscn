@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c1t6mi2pdh70q"]
+
+[ext_resource type="Script" uid="uid://c2ygtnyxp6qx" path="res://mechanics/transition_button.gd" id="1_st7ng"]
+[ext_resource type="Texture2D" uid="uid://dwoqyubfkp05t" path="res://assets/art/ArrowRightDefault.png" id="2_dpggj"]
+[ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="3_3gloh"]
+[ext_resource type="Texture2D" uid="uid://w78oofi7e5an" path="res://assets/art/ArrowRightOutlinedLight.png" id="4_wbgw8"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_st7ng"]
+
+[node name="TransitionButton" type="Control" unique_id=836348835]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="TextureButton" parent="." unique_id=1214376929]
+layout_mode = 0
+offset_right = 95.0
+offset_bottom = 31.0
+texture_normal = ExtResource("2_dpggj")
+texture_pressed = ExtResource("3_3gloh")
+texture_hover = ExtResource("4_wbgw8")
+texture_disabled = SubResource("PlaceholderTexture2D_st7ng")
+script = ExtResource("1_st7ng")
+progress_label_path = NodePath("../Label")
+
+[node name="Label" type="Label" parent="." unique_id=1158141980]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "view all potential evidence to continue (0/x)"
