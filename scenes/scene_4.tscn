@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://hkgkwh23m62"]
+
+[ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_2r1qs"]
+
+[node name="scene_4" type="Control" unique_id=773133060]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundWoodTexture" type="Sprite2D" parent="." unique_id=674437860]
+position = Vector2(800, 600)
+texture = ExtResource("1_2r1qs")
