@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bariglnnjdcnk" path="res://assets/audio/HeyStayAway.mp3" id="5_r2pi8"]
 [ext_resource type="AudioStream" uid="uid://cynm1rsojgk4p" path="res://assets/audio/Ididntwant to daysyasy.mp3" id="6_lmrsu"]
 [ext_resource type="AudioStream" uid="uid://bdi0fjj37ecuc" path="res://assets/audio/yeah its a bt oncetning.mp3" id="7_087sr"]
+[ext_resource type="AudioStream" uid="uid://nr7r2ojagaad" path="res://assets/audio/To be completely honest with you_Henry.ogg" id="9_cuwey"]
 [ext_resource type="Texture2D" uid="uid://w78oofi7e5an" path="res://assets/art/ArrowRightOutlinedLight.png" id="9_gm7q5"]
 [ext_resource type="Texture2D" uid="uid://dwoqyubfkp05t" path="res://assets/art/ArrowRightDefault.png" id="10_2rqdi"]
 [ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="11_pl5ms"]
@@ -73,8 +74,8 @@ offset_top = 823.0
 offset_right = 1090.0
 offset_bottom = 1541.0
 scale = Vector2(0.39528054, 0.3908963)
-audio_clips = Array[AudioStream]([ExtResource("5_r2pi8"), ExtResource("6_lmrsu"), ExtResource("7_087sr")])
-transcripts = Array[String](["Hey, stay away from Rodney okay? Don’t let him get close to you.", "I didn’t want to say this while he was still here, but don’t you think Rodney is bringing down the environment here?", "Yeah it’s a bit concerning… I don’t know what to do."])
+audio_clips = Array[AudioStream]([ExtResource("5_r2pi8"), ExtResource("6_lmrsu"), ExtResource("7_087sr"), ExtResource("9_cuwey")])
+transcripts = Array[String](["[1/4] Hey, stay away from Rodney okay? Don’t let him get close to you.", "[2/4] I didn’t want to say this while he was still here, but don’t you think Rodney is bringing down the environment here?", "[3/4] Yeah it’s a bit concerning… I don’t know what to do.", "[4/4] To be completely honest, I’m glad he’s gone."])
 
 [node name="TranscriptLabel" type="Label" parent="VoiceRecordings" index="2" unique_id=1860173757]
 layout_mode = 0

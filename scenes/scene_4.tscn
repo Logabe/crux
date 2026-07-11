@@ -2,6 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_2r1qs"]
 [ext_resource type="Script" uid="uid://cgrx0i6k5fln1" path="res://scenes/scene_4.gd" id="1_mrf31"]
+[ext_resource type="Texture2D" uid="uid://bryja4pmadjf2" path="res://assets/art/ccvtv_button.png" id="3_jv7aj"]
+[ext_resource type="Texture2D" uid="uid://d11dqdva5y8vi" path="res://assets/art/ccvtv_button_hover.png" id="4_k1qvo"]
+[ext_resource type="Script" uid="uid://dkmgaj6d6878q" path="res://scenes/cctv.gd" id="5_7viaw"]
+[ext_resource type="Texture2D" uid="uid://w78oofi7e5an" path="res://assets/art/ArrowRightOutlinedLight.png" id="6_niqgf"]
+[ext_resource type="Texture2D" uid="uid://dwoqyubfkp05t" path="res://assets/art/ArrowRightDefault.png" id="7_3hk0k"]
+[ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="8_wjcmq"]
+[ext_resource type="Script" uid="uid://cae4l33madkkp" path="res://scenes/transition_button.gd" id="9_r3hp6"]
 
 [node name="scene_4" type="Control" unique_id=773133060]
 layout_mode = 3
@@ -16,10 +23,41 @@ script = ExtResource("1_mrf31")
 position = Vector2(800, 600)
 texture = ExtResource("1_2r1qs")
 
-[node name="Button" type="Button" parent="." unique_id=181175226]
+[node name="CCTV" type="TextureButton" parent="." unique_id=449789885]
+custom_minimum_size = Vector2(1, 1)
+custom_maximum_size = Vector2(500, 500)
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "play vid"
+offset_left = 504.0
+offset_top = 368.0
+offset_right = 978.0
+offset_bottom = 842.0
+texture_normal = ExtResource("3_jv7aj")
+texture_hover = ExtResource("4_k1qvo")
+script = ExtResource("5_7viaw")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="ProgressLabel" type="Label" parent="CCTV" unique_id=858105086]
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 1
+offset_left = -503.0
+offset_top = -366.0
+offset_right = -418.0
+offset_bottom = -337.0
+
+[node name="TransitionButton" type="TextureButton" parent="." unique_id=1864087930]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -374.0
+offset_top = -134.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("6_niqgf")
+texture_pressed = ExtResource("7_3hk0k")
+texture_hover = ExtResource("8_wjcmq")
+script = ExtResource("9_r3hp6")
+
+[connection signal="pressed" from="CCTV" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TransitionButton" to="TransitionButton" method="_on_pressed"]
