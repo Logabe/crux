@@ -60,6 +60,7 @@ offset_right = 311.24976
 offset_bottom = 408.12466
 theme = SubResource("Theme_m46s0")
 theme_override_colors/font_color = Color(0.16565639, 0.16565642, 0.16565639, 1)
+theme_override_colors/font_placeholder_color = Color(0.3882353, 0.3882353, 0.3882353, 0.69803923)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxEmpty_m46s0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dq1tk")
