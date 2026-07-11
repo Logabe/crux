@@ -3,7 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://3bhalebryt54" path="res://scenes/base.tscn" id="1_e23nr"]
 [ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="2_cjh3u"]
 [ext_resource type="Theme" uid="uid://c2gw58mhw0uys" path="res://theme.tres" id="2_xcvhn"]
+[ext_resource type="Texture2D" uid="uid://cyjppc6dbhk76" path="res://assets/art/BackgroundRoomWall3.png" id="3_5uf0h"]
 [ext_resource type="PackedScene" uid="uid://d0qdekxddvcrq" path="res://mechanics/soundplayer.tscn" id="3_lon35"]
+[ext_resource type="AudioStream" uid="uid://bariglnnjdcnk" path="res://assets/audio/HeyStayAway.mp3" id="5_r2pi8"]
+[ext_resource type="AudioStream" uid="uid://cynm1rsojgk4p" path="res://assets/audio/Ididntwant to daysyasy.mp3" id="6_lmrsu"]
+[ext_resource type="AudioStream" uid="uid://bdi0fjj37ecuc" path="res://assets/audio/yeah its a bt oncetning.mp3" id="7_087sr"]
+[ext_resource type="Texture2D" uid="uid://w78oofi7e5an" path="res://assets/art/ArrowRightOutlinedLight.png" id="9_gm7q5"]
+[ext_resource type="Texture2D" uid="uid://dwoqyubfkp05t" path="res://assets/art/ArrowRightDefault.png" id="10_2rqdi"]
+[ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="11_pl5ms"]
+[ext_resource type="Script" uid="uid://cae4l33madkkp" path="res://scenes/transition_button.gd" id="12_wsd5d"]
+[ext_resource type="Texture2D" uid="uid://doq3bkx2ikxu7" path="res://assets/art/minimized_policerecord_default.png" id="13_wsd5d"]
+[ext_resource type="Texture2D" uid="uid://ckn4mq5pw8ese" path="res://assets/art/minimized_policerecord_hover.png" id="14_cuwey"]
+[ext_resource type="Script" uid="uid://cjbk82l4m11ys" path="res://scenes/police_record_hara.gd" id="15_yw7mx"]
+[ext_resource type="Texture2D" uid="uid://bpgactydmm5lw" path="res://assets/art/CriminalRecordsRodney.png" id="16_t5e5o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjh3u"]
 content_margin_left = 8.0
@@ -18,14 +30,25 @@ corner_radius_bottom_left = 4
 [node name="Evidence" unique_id=1873289180 instance=ExtResource("1_e23nr")]
 theme = ExtResource("2_xcvhn")
 
-[node name="BackgroundWoodTexture" type="Sprite2D" parent="." index="4" unique_id=266656535]
-position = Vector2(800, 600)
+[node name="BackgroundRoomWall" type="Sprite2D" parent="." index="0" unique_id=1448411764]
+modulate = Color(1, 1, 1, 0.32156864)
+position = Vector2(800, 500.99994)
+scale = Vector2(0.85999984, 0.8600001)
+texture = ExtResource("3_5uf0h")
+
+[node name="WoodBackground" type="Sprite2D" parent="." index="1" unique_id=1968734476]
+position = Vector2(800.24994, 1187.0625)
+scale = Vector2(1.0134374, 1.0134375)
 texture = ExtResource("2_cjh3u")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="5" unique_id=1710269618]
+[node name="Button" parent="." index="3" unique_id=2140599028]
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="6" unique_id=1710269618]
+visible = false
 layout_mode = 0
-offset_left = 1003.0
-offset_top = 226.0
+offset_left = 1249.0
+offset_top = 568.7721
 offset_right = 1547.0
 offset_bottom = 984.0
 theme_override_colors/default_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
@@ -43,9 +66,57 @@ Date of offense: 01/02/2009
 Penalty: $500 fine
 [hr]"
 
-[node name="TextureButton" parent="." index="6" unique_id=1729049346 instance=ExtResource("3_lon35")]
+[node name="VoiceRecordings" parent="." index="7" unique_id=1729049346 instance=ExtResource("3_lon35")]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 241.0
-offset_right = 962.0
-offset_bottom = 959.0
+offset_left = 168.0
+offset_top = 823.0
+offset_right = 1090.0
+offset_bottom = 1541.0
+scale = Vector2(0.39528054, 0.3908963)
+audio_clips = Array[AudioStream]([ExtResource("5_r2pi8"), ExtResource("6_lmrsu"), ExtResource("7_087sr")])
+transcripts = Array[String](["Hey, stay away from Rodney okay? Don’t let him get close to you.", "I didn’t want to say this while he was still here, but don’t you think Rodney is bringing down the environment here?", "Yeah it’s a bit concerning… I don’t know what to do."])
+
+[node name="TranscriptLabel" type="Label" parent="VoiceRecordings" index="2" unique_id=1860173757]
+layout_mode = 0
+offset_left = 2.5298405
+offset_top = -273.72986
+offset_right = 1436.9541
+offset_bottom = 245.7467
+theme_override_font_sizes/font_size = 70
+autowrap_mode = 2
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="VoiceRecordings" index="3" unique_id=1704959113]
+
+[node name="ProgressLabel" type="Label" parent="." index="8" unique_id=421528018]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TransitionButton" type="TextureButton" parent="." index="9" unique_id=2041844666]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -374.0
+offset_top = -134.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("9_gm7q5")
+texture_pressed = ExtResource("10_2rqdi")
+texture_hover = ExtResource("11_pl5ms")
+script = ExtResource("12_wsd5d")
+
+[node name="PoliceRecordHara" type="TextureButton" parent="." index="10" unique_id=163481495]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 911.0
+offset_right = 1120.0
+offset_bottom = 1031.0
+texture_normal = ExtResource("13_wsd5d")
+texture_hover = ExtResource("14_cuwey")
+script = ExtResource("15_yw7mx")
+zoom_texture = ExtResource("16_t5e5o")
+
+[connection signal="pressed" from="TransitionButton" to="TransitionButton" method="_on_pressed"]

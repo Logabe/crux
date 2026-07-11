@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdi0fjj37ecuc"
+path="res://.godot/imported/yeah its a bt oncetning.mp3-278401e5198e297548ab07c305431692.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/yeah its a bt oncetning.mp3"
+dest_files=["res://.godot/imported/yeah its a bt oncetning.mp3-278401e5198e297548ab07c305431692.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

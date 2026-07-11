@@ -1,29 +1,37 @@
 extends TextureButton
 
-@export var streams: Array[AudioStream]
+@export var object_id: String = "voicerecordings"
+@export var zoom_texture: Texture2D
 
-@onready var player = $AudioStreamPlayer
+@onready var audio_player_2: AudioStreamPlayer = $AudioStreamPlayer2
+@onready var transcript_label: Label = $TranscriptLabel
 
-var i: int = 0
+@export var audio_clips: Array[AudioStream] = []
+@export var transcripts: Array[String] = []
 
-var piptex  = preload("res://assets/art/AudioPlayerPip.png")
-var piptexactivated = preload("res://assets/art/AudioPlayerPipActivate.png")
+var current_index: int = 0 
 
-func _ready():
-	var scene = preload("res://mechanics/audio_player_pip.tscn")
-	for i in streams:
-		$PipsContainer.add_child(scene.instantiate())
 
-func interact(toggled: bool):
-	if !player.playing and !player.stream_paused:
-		player.stream = streams[0]
-		player.play()
-	player.stream_paused = !toggled
-	$PipsContainer.get_child(0).texture = piptexactivated
+func _ready() -> void:
+	toggle_mode = true
+	toggled.connect(_on_toggled)
+	transcript_label.visible = false 
+	audio_player_2.finished.connect(_on_audio_finished)
 
-func play_next() -> void:
-	$PipsContainer.get_child(i).texture = piptex
-	i = (i + 1) % len(streams)
-	player.stream = streams[i]
-	player.play()
-	$PipsContainer.get_child(i).texture = piptexactivated
+func _on_toggled(is_pressed: bool) -> void:
+	if is_pressed:
+		ClickTracker.register_click(object_id)
+	var clip := audio_clips[current_index]
+	audio_player_2.stream = clip 
+	audio_player_2.play() 
+	
+	transcript_label.text = transcripts[current_index]
+	transcript_label.visible = true 
+	
+	disabled = true 
+	
+	current_index = (current_index + 1) % audio_clips.size()
+	
+func _on_audio_finished() -> void: 
+	transcript_label.visible = false
+	disabled = false 
