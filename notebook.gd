@@ -1,13 +1,14 @@
 extends CanvasLayer
 
 @onready var icon: TextureButton = $NotebookIcon
-@onready var panel: Control = $NotebookIcon/NotebookPanel
-@onready var left_text: TextEdit = $NotebookIcon/NotebookPanel/LeftPage/LeftTextEdit
-@onready var right_label: RichTextLabel = $NotebookIcon/NotebookPanel/RightPage/RightRichLabel
+@onready var panel: Control = $NotebookPanel
+@onready var left_text: TextEdit = $NotebookPanel/LeftPage/LeftTextEdit
+@onready var right_label: RichTextLabel = $NotebookPanel/RightPage/RightRichLabel
 
 var is_open: bool = false
 
 func _ready() -> void:
+	visible = false
 	left_text.add_theme_color_override("font_color", Color(0.1, 0.1, 0.1)) # dark ink
 	left_text.add_theme_color_override("font_selected_color", Color(1, 1, 1))
 	left_text.add_theme_color_override("font_placeholder_color", Color(0.5, 0.5, 0.5, 0.6))

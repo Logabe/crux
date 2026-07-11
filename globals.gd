@@ -12,6 +12,7 @@ func scene_display_number():
 	return scene_number() + 1
 
 func go_to_next():
+	Notebook.visible = true
 	print("hi")
 	i = (1 + i) % (len(evidence_scenes) * 2)
 	var path = "test.tscn" if i % 2 == 0 else evidence_scenes[scene_number()]
