@@ -16,6 +16,9 @@
 [ext_resource type="AudioStream" uid="uid://dieltdgjqgf4w" path="res://assets/audio/thats hard to believe.ogg" id="12_bt1fo"]
 [ext_resource type="AudioStream" uid="uid://bif3kgnklcchq" path="res://assets/audio/I dont see how.ogg" id="13_0xl4q"]
 [ext_resource type="AudioStream" uid="uid://c6oqloetan5id" path="res://assets/audio/oh hes a greeeaaatttt person.ogg" id="14_oyiwn"]
+[ext_resource type="Texture2D" uid="uid://doq3bkx2ikxu7" path="res://assets/art/minimized_policerecord_default.png" id="15_oyiwn"]
+[ext_resource type="Texture2D" uid="uid://ckn4mq5pw8ese" path="res://assets/art/minimized_policerecord_hover.png" id="16_8igo0"]
+[ext_resource type="Script" uid="uid://cjbk82l4m11ys" path="res://scenes/police_record_hara.gd" id="17_i44rj"]
 
 [node name="Scene2" type="Control" unique_id=1981619829]
 layout_mode = 3
@@ -86,6 +89,17 @@ offset_top = 11.0
 offset_right = -6.8049927
 offset_bottom = 290.0
 theme_override_font_sizes/font_size = 30
+
+[node name="PoliceRecordHara" type="TextureButton" parent="." unique_id=1946420689]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 959.0
+offset_right = 1160.0
+offset_bottom = 1079.0
+texture_normal = ExtResource("15_oyiwn")
+texture_hover = ExtResource("16_8igo0")
+script = ExtResource("17_i44rj")
+zoom_texture = ExtResource("15_oyiwn")
 
 [node name="PauseMenu" parent="." unique_id=250443325 instance=ExtResource("11_a3h35")]
 z_index = 10

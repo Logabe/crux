@@ -16,10 +16,6 @@ func show_zoom(texture: Texture2D, source_button: BaseButton = null) -> void:
 	current_source_button = source_button
 	zoomed_texture.texture = texture
 
-	# Let the TextureRect be exactly the texture's native size —
-	# ScrollContainer will handle showing scrollbars if it's taller than the viewport
-	zoomed_texture.custom_minimum_size = texture.get_size()
-	zoomed_texture.size = texture.get_size()
 
 	visible = true
 	scroll_container.scroll_vertical = 0 # reset scroll position each time it opens
