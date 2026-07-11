@@ -129,6 +129,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Soup S.S. Sahur is accused of the murder of Barack Obama."
 label_settings = SubResource("LabelSettings_65f5o")
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1009143481]
 custom_minimum_size = Vector2(332, 57)
