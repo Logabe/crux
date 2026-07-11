@@ -14,7 +14,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dftia"]
 
 [node name="Notebook" type="CanvasLayer" unique_id=1546100107]
-visible = false
 script = ExtResource("1_iyn07")
 
 [node name="NotebookIcon" type="TextureButton" parent="." unique_id=944769527]
