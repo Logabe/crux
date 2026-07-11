@@ -83,7 +83,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_ul8a6")
 audio_clips = Array[AudioStream]([ExtResource("11_vlvxn"), ExtResource("12_bt1fo"), ExtResource("13_0xl4q"), ExtResource("14_oyiwn")])
-transcripts = Array[String](["[1/4] Are you sure it was him?", "[2/4] That's hard to believe.", "[3/4]  don't see how Harakore could have done this.", "[4/4] Oh, he's a great person!"])
+transcripts = Array[String](["[1/4] Are you sure it was him?", "[2/4] That's hard to believe.", "[3/4] I don't see how Hara could have done this.", "[4/4] Oh, he's a great person!"])
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="CrowdVoice" unique_id=1628070575]
 
