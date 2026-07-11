@@ -24,3 +24,7 @@ func register_click(object_id: String) -> void:
 	first_click_count += 1
 	first_click_registered.emit(object_id, first_click_count)
 	print("First click on '%s' — total unique clicks: %d" % [object_id, first_click_count])
+
+func reset() -> void:
+	clicked_objects.clear()
+	first_click_count = 0
