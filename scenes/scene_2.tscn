@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dmlxpqpi2jdm0"]
+
+[ext_resource type="Texture2D" uid="uid://c6xwkbsnxl5nm" path="res://assets/art/BackgroundWoodTexture.png" id="1_xe0r6"]
+
+[node name="Scene2" type="Control" unique_id=1981619829]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=36255271]
+
+[node name="WoodBackground" type="Sprite2D" parent="CanvasLayer" unique_id=669469682]
+position = Vector2(574.33325, 725.74994)
+scale = Vector2(0.7520833, 0.7520833)
+texture = ExtResource("1_xe0r6")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer" unique_id=388569702]
+offset_right = 40.0
+offset_bottom = 40.0
