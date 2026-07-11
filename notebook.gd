@@ -24,8 +24,6 @@ func _ready() -> void:
 	if panel.has_node("CloseButton"):
 		panel.get_node("CloseButton").pressed.connect(close_notebook)
 
-	_load_notes() # load saved player notes 
-
 func _on_icon_pressed() -> void:
 	if is_open:
 		close_notebook()
@@ -45,7 +43,6 @@ func open_notebook() -> void:
 func close_notebook() -> void:
 	panel.visible = false
 	is_open = false
-	_save_notes()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_notebook"):
@@ -54,33 +51,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		close_notebook()
 		# these above are for the "n" keyboard shortcut to open/close the notebook
 		# the ui_cancel is a built-in inputmap 
-		
-		
-		
-const SAVE_PATH := "user://player_notes.json"
-
-func _save_notes() -> void:
-	var data := {
-		"player_text": left_text.text,
-		"case_notes": right_label.text
-	}
-	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-	file.store_string(JSON.stringify(data))
-	file.close()
-
-func _load_notes() -> void:
-	if not FileAccess.file_exists(SAVE_PATH):
-		return
-	var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
-	var parsed = JSON.parse_string(file.get_as_text())
-	file.close()
-	if parsed:
-		left_text.text = parsed.get("player_text", "")
-		right_label.text = parsed.get("case_notes", "")
-		
-		
-		
-
 signal note_added(text: String)
 
 func add_auto_note(text: String, category: String = "") -> void:
