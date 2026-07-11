@@ -14,33 +14,38 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dftia"]
 
 [node name="Notebook" type="CanvasLayer" unique_id=1546100107]
+visible = false
 script = ExtResource("1_iyn07")
 
 [node name="NotebookIcon" type="TextureButton" parent="." unique_id=944769527]
-offset_right = 40.0
-offset_bottom = 40.0
+custom_maximum_size = Vector2(102, 130)
+offset_left = 11.0
+offset_top = 508.0
+offset_right = 113.0
+offset_bottom = 638.0
 texture_normal = ExtResource("2_pkymh")
 texture_hover = ExtResource("3_m46s0")
 stretch_mode = 0
 
-[node name="NotebookPanel" type="Control" parent="NotebookIcon" unique_id=243872820]
+[node name="NotebookPanel" type="Control" parent="." unique_id=243872820]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Background" type="Sprite2D" parent="NotebookIcon/NotebookPanel" unique_id=1992585836]
+[node name="Background" type="Sprite2D" parent="NotebookPanel" unique_id=1992585836]
 position = Vector2(595, 321)
 scale = Vector2(0.31573182, 0.31573182)
 texture = ExtResource("4_m46s0")
 
-[node name="LeftPage" type="Control" parent="NotebookIcon/NotebookPanel" unique_id=2066022680]
+[node name="LeftPage" type="Control" parent="NotebookPanel" unique_id=2066022680]
 anchors_preset = 0
 offset_left = 410.0
 offset_top = 169.0
 offset_right = 568.0
 offset_bottom = 458.0
 
-[node name="LeftTextEdit" type="TextEdit" parent="NotebookIcon/NotebookPanel/LeftPage" unique_id=2039562982]
+[node name="LeftTextEdit" type="TextEdit" parent="NotebookPanel/LeftPage" unique_id=2039562982]
 layout_mode = 0
 offset_right = 149.0
 offset_bottom = 299.0
@@ -54,12 +59,12 @@ placeholder_text = "Take some notes..."
 wrap_mode = 1
 scroll_smooth = true
 
-[node name="RightPage" type="Control" parent="NotebookIcon/NotebookPanel" unique_id=919131999]
+[node name="RightPage" type="Control" parent="NotebookPanel" unique_id=919131999]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="RightRichLabel" type="RichTextLabel" parent="NotebookIcon/NotebookPanel/RightPage" unique_id=1772006658]
+[node name="RightRichLabel" type="RichTextLabel" parent="NotebookPanel/RightPage" unique_id=1772006658]
 layout_mode = 0
 offset_left = 619.0
 offset_top = 172.0
