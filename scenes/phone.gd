@@ -13,3 +13,7 @@ func _on_toggled(is_pressed: bool) -> void:
 		ZoomPopup.show_zoom(zoom_texture, self)
 	else:
 		ZoomPopup.hide_zoom()
+
+
+func _on_crowd_voice_toggled(toggled_on: bool) -> void:
+	pass # Replace with function body.
