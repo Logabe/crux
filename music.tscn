@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://f4h3oo3wosko"]
+
+[ext_resource type="AudioStream" uid="uid://c737gqq8jv0gl" path="res://assets/audio/Horizons Crux Score.mp3" id="1_3h6ak"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=193022836]
+stream = ExtResource("1_3h6ak")
+autoplay = true

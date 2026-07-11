@@ -14,13 +14,15 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.39215687)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1523114784]
-custom_minimum_size = Vector2(600, 648)
+custom_minimum_size = Vector2(1200, 648)
 anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
+mouse_filter = 2
 tile_scroll_hint = true
 
 [node name="ZoomedTextureRect" type="TextureRect" parent="ScrollContainer" unique_id=1536294692]
 layout_mode = 2
+offset_transform_position_ratio = Vector2(0.5, 0.5)
 expand_mode = 1
 stretch_mode = 5

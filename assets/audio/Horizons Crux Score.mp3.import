@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c737gqq8jv0gl"
+path="res://.godot/imported/Horizons Crux Score.mp3-aa9257bffe97ab52760bf0289ee0ede3.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Horizons Crux Score.mp3"
+dest_files=["res://.godot/imported/Horizons Crux Score.mp3-aa9257bffe97ab52760bf0289ee0ede3.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

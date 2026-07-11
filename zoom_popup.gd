@@ -22,6 +22,11 @@ func show_zoom(texture: Texture2D, source_button: BaseButton = null) -> void:
 	zoomed_texture.custom_minimum_size = tex_size * scale_factor
 	zoomed_texture.size = tex_size * scale_factor
 
+	if(zoomed_texture.texture == load("res://assets/art/CriminalRecordsHarakore.png")):
+		zoomed_texture.offset_transform_enabled = true
+	else:
+		zoomed_texture.offset_transform_enabled = false
+
 	visible = true
 	scroll_container.scroll_vertical = 0 # reset scroll position each time it opens
 	scroll_container.modulate.a = 0.0
