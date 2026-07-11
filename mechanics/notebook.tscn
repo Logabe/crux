@@ -54,12 +54,12 @@ scale = Vector2(1.6000012, 1.6000012)
 
 [node name="LeftTextEdit" type="TextEdit" parent="NotebookPanel/LeftPage" unique_id=2039562982]
 layout_mode = 0
-offset_left = 222.0
-offset_top = 186.0
-offset_right = 480.0
-offset_bottom = 682.0
+offset_left = 148.7499
+offset_top = 128.74991
+offset_right = 311.24976
+offset_bottom = 408.12466
 theme = SubResource("Theme_m46s0")
-theme_override_colors/font_color = Color(0.29218963, 0.29219028, 0.29218978, 1)
+theme_override_colors/font_color = Color(0.16565639, 0.16565642, 0.16565639, 1)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxEmpty_m46s0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dq1tk")
@@ -77,9 +77,9 @@ scale = Vector2(1.6000012, 1.6000012)
 
 [node name="RightRichLabel" type="RichTextLabel" parent="NotebookPanel/RightPage" unique_id=1772006658]
 layout_mode = 0
-offset_left = 940.0
-offset_top = 369.0
-offset_right = 1219.0
-offset_bottom = 846.0
+offset_left = 593.7496
+offset_top = 234.99982
+offset_right = 753.1244
+offset_bottom = 518.7496
 bbcode_enabled = true
 autowrap_mode = 1
