@@ -23,6 +23,7 @@ offset_top = 1044.0
 offset_right = 131.0
 offset_bottom = 1174.0
 texture_normal = ExtResource("2_pkymh")
+texture_pressed = ExtResource("2_pkymh")
 texture_hover = ExtResource("3_m46s0")
 stretch_mode = 0
 

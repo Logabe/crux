@@ -111,9 +111,7 @@ zoom_texture = ExtResource("19_lkfw3")
 z_index = 10
 layout_mode = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=791716204]
-
-[node name="Notebook" parent="CanvasLayer" unique_id=1546100107 instance=ExtResource("10_nb8vq")]
+[node name="Notebook" parent="." unique_id=1546100107 instance=ExtResource("10_nb8vq")]
 
 [node name="ProgressLabel" type="Label" parent="." unique_id=1176306837]
 layout_mode = 0
