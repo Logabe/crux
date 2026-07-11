@@ -1,5 +1,11 @@
 extends Node
 
+# TO USE THIS GLOBAL JUST 
+# AFTER EVERY SCENE USE
+# Globals.return_to_original() 
+# TO GO BACK TO THE TEST SCENE AND MAKE THE PLAYER MAKE THE CHOICE AGAIN
+# !!!!1
+
 var i = 0 # Internal counter
 var sequence_index: int = 0 
 
@@ -7,7 +13,7 @@ var sequence_index: int = 0
 var evidence_scenes: Array[String] = [
 	"res://scenes/scene_2.tscn", 
 	"res://scenes/scene_3.tscn", 
-	"scene_4.tscn"
+	"res://scenes/scene_4.tscn"
 ]
 
 const original_scene_path := "res://scenes/test.tscn"
