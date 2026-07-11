@@ -16,6 +16,11 @@ func show_zoom(texture: Texture2D, source_button: BaseButton = null) -> void:
 	current_source_button = source_button
 	zoomed_texture.texture = texture
 
+	var max_size := Vector2(800, 1200)
+	var tex_size := texture.get_size()
+	var scale_factor: float = min(max_size.x / tex_size.x, max_size.y / tex_size.y, 1.0)
+	zoomed_texture.custom_minimum_size = tex_size * scale_factor
+	zoomed_texture.size = tex_size * scale_factor
 
 	visible = true
 	scroll_container.scroll_vertical = 0 # reset scroll position each time it opens
