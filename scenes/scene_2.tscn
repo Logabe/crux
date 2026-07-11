@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://doq3bkx2ikxu7" path="res://assets/art/minimized_policerecord_default.png" id="15_oyiwn"]
 [ext_resource type="Texture2D" uid="uid://ckn4mq5pw8ese" path="res://assets/art/minimized_policerecord_hover.png" id="16_8igo0"]
 [ext_resource type="Script" uid="uid://cjbk82l4m11ys" path="res://scenes/police_record_hara.gd" id="17_i44rj"]
+[ext_resource type="PackedScene" uid="uid://c1t6mi2pdh70q" path="res://mechanics/transition_button.tscn" id="20_8igo0"]
 
 [node name="Scene2" type="Control" unique_id=1981619829]
 layout_mode = 3
@@ -28,6 +29,9 @@ anchor_bottom = 1.0
 offset_right = 7.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TransitionButton" parent="." unique_id=836348835 instance=ExtResource("20_8igo0")]
+layout_mode = 1
 
 [node name="BackgroundRoomWall" type="Sprite2D" parent="." unique_id=1390783331]
 modulate = Color(1, 1, 1, 0.32156864)
@@ -45,10 +49,10 @@ z_index = 3
 z_as_relative = false
 y_sort_enabled = true
 layout_mode = 0
-offset_left = 1338.4558
-offset_top = 795.2654
-offset_right = 1533.4688
-offset_bottom = 1114.5764
+offset_left = 1316.8785
+offset_top = 694.0768
+offset_right = 1511.8915
+offset_bottom = 1013.3878
 rotation = 0.1854537
 toggle_mode = true
 texture_normal = ExtResource("2_02v7m")
@@ -59,7 +63,7 @@ script = ExtResource("4_a3h35")
 zoom_texture = ExtResource("3_a3h35")
 
 [node name="TapeLabelRodney" type="Sprite2D" parent="." unique_id=1493112667]
-position = Vector2(1455, 758)
+position = Vector2(1433.4227, 656.8114)
 rotation = 0.25976533
 scale = Vector2(0.41257274, 0.41257274)
 texture = ExtResource("5_yun4j")
