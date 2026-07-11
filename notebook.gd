@@ -32,6 +32,7 @@ func _on_icon_pressed() -> void:
 		open_notebook()
 
 func open_notebook() -> void:
+	play_sfx()
 	panel.visible = true
 	panel.modulate.a = 0.0
 	panel.scale = Vector2(0.8, 0.8)
@@ -72,6 +73,8 @@ func _flash_icon_notification() -> void:
 	if icon.has_node("NotificationDot"):
 		icon.get_node("NotificationDot").visible = true # notification dot to notify player of updates to notebook
 		
+func play_sfx() -> void:
+	pass
 
 """
 now if we want to add anything to the notebook automatically, 
