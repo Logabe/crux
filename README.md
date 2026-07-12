@@ -17,20 +17,21 @@ Welcome to...
 
 
 ## Features
-- easter eggs
-- clickable buttons
-- interactive investion (?)
-- custom drawn art
-- heartwarming storytelling
-- if statements
-- else statements
-- uses the scenes feature of godot
-- uses autoload
-- use of functions
-- at least 3 variables
+- easter eggs (can you find them?)
+- intriguing storytelling
+- mysteries and secrets to unravel
+- clickable buttons (who doesn't love that)
+- interactive investion
+- fully 100% custom drawn art
 
-## How to play
 
-[https://viywolf.itch.io/you-are-ostensibly-investigating-some-information-made-under-literal-and-terribl](https://viywolf.itch.io/you-are-ostensibly-investigating-some-information-made-under-literal-and-terribl)
+This game is 100% fictional. Any references to real-life events are purely coincidental. 
 
-Made with Godot
+
+## How to Play
+
+Play on itch.io! Our link is attached below. 
+
+[https://viywolf.itch.io/yaoi](https://viywolf.itch.io/you-are-ostensibly-investigating-some-information-made-under-literal-and-terribl)
+
+Made with Godot 
