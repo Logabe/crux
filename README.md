@@ -14,3 +14,23 @@ Welcome to...
 **The Crux Of Storytelling.**
 
 ![](/assets/art/example_image.png "Title screen")
+
+
+## Features
+- easter eggs
+- clickable buttons
+- interactive investion (?)
+- custom drawn art
+- heartwarming storytelling
+- if statements
+- else statements
+- uses the scenes feature of godot
+- uses autoload
+- use of functions
+- at least 3 variables
+
+## How to play
+
+[https://viywolf.itch.io/you-are-ostensibly-investigating-some-information-made-under-literal-and-terribl](https://viywolf.itch.io/you-are-ostensibly-investigating-some-information-made-under-literal-and-terribl)
+
+Made with Godot
