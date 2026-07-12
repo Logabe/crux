@@ -31,4 +31,12 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_7viaw")
 text = "Start Game"
 autowrap_mode = 2
 
+[node name="Label" type="Label" parent="." unique_id=1971211402]
+offset_left = 1101.0
+offset_top = 1132.0
+offset_right = 1583.0
+offset_bottom = 1195.0
+theme_override_font_sizes/font_size = 45
+text = "Please have sound on!"
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

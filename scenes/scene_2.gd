@@ -9,6 +9,7 @@ func _ready() -> void:
 	next_arrow.visible = false
 	progress_label.text = "0/%d" % required_clicks
 	ClickTracker.first_click_registered.connect(_on_first_click_registered)
+	Notebook.add_auto_note("Victim and suspect were in a relationship for one year") # this is put in on the right side of the notebook
 
 func _on_first_click_registered(object_name: String, total_count: int) -> void:
 	progress_label.text = "%d/%d" % [total_count, required_clicks]

@@ -14,9 +14,16 @@
 [ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="11_pl5ms"]
 [ext_resource type="Script" uid="uid://cae4l33madkkp" path="res://scenes/transition_button.gd" id="12_wsd5d"]
 [ext_resource type="Texture2D" uid="uid://doq3bkx2ikxu7" path="res://assets/art/minimized_policerecord_default.png" id="13_wsd5d"]
-[ext_resource type="Texture2D" uid="uid://ckn4mq5pw8ese" path="res://assets/art/minimized_policerecord_hover.png" id="14_cuwey"]
+[ext_resource type="Texture2D" uid="uid://bg1e3t6a3jrf3" path="res://assets/art/minimized_policerecord_hover2.png" id="15_cuwey"]
 [ext_resource type="Script" uid="uid://cjbk82l4m11ys" path="res://scenes/police_record_hara.gd" id="15_yw7mx"]
 [ext_resource type="Texture2D" uid="uid://bpgactydmm5lw" path="res://assets/art/CriminalRecordsRodney.png" id="16_t5e5o"]
+[ext_resource type="Texture2D" uid="uid://d3odyifgi23ir" path="res://assets/art/BloodBag.png" id="18_t5e5o"]
+[ext_resource type="Texture2D" uid="uid://b307ajiajqqv4" path="res://assets/art/Pen.png" id="18_yw7mx"]
+[ext_resource type="Script" uid="uid://bok7nqagvw2x7" path="res://scenes/bloodbag.gd" id="19_i6f48"]
+[ext_resource type="Texture2D" uid="uid://bax8icuve6444" path="res://assets/art/BloodBag_hover.png" id="19_ptyiu"]
+[ext_resource type="Texture2D" uid="uid://iyc4dfxiugfn" path="res://assets/art/Calander (1).png" id="21_uagnf"]
+[ext_resource type="Texture2D" uid="uid://b2daj0agybg6a" path="res://assets/art/Calander_hover.png" id="22_tu0qc"]
+[ext_resource type="Script" uid="uid://dttpaj77h3r5r" path="res://scenes/calendar.gd" id="23_6wdc2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjh3u"]
 content_margin_left = 8.0
@@ -116,8 +123,38 @@ offset_top = 911.0
 offset_right = 1120.0
 offset_bottom = 1031.0
 texture_normal = ExtResource("13_wsd5d")
-texture_hover = ExtResource("14_cuwey")
+texture_hover = ExtResource("15_cuwey")
 script = ExtResource("15_yw7mx")
 zoom_texture = ExtResource("16_t5e5o")
+
+[node name="Bloodbag" type="TextureButton" parent="." index="11" unique_id=126230788]
+layout_mode = 0
+offset_left = 1135.0
+offset_top = 594.0
+offset_right = 2155.0
+offset_bottom = 1507.0
+scale = Vector2(0.22102107, 0.22446822)
+texture_normal = ExtResource("18_t5e5o")
+texture_hover = ExtResource("19_ptyiu")
+script = ExtResource("19_i6f48")
+zoom_texture = ExtResource("18_t5e5o")
+
+[node name="Calendar" type="TextureButton" parent="." index="12" unique_id=1983703079]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 339.0
+offset_right = 1582.0
+offset_bottom = 1339.0
+scale = Vector2(0.47999942, 0.48000002)
+texture_normal = ExtResource("21_uagnf")
+texture_hover = ExtResource("22_tu0qc")
+script = ExtResource("23_6wdc2")
+zoom_texture = ExtResource("21_uagnf")
+
+[node name="Pen" type="Sprite2D" parent="." index="13" unique_id=2118224247]
+position = Vector2(1527, 706)
+rotation = 0.46317697
+scale = Vector2(0.22881274, 0.22881271)
+texture = ExtResource("18_yw7mx")
 
 [connection signal="pressed" from="TransitionButton" to="TransitionButton" method="_on_pressed"]

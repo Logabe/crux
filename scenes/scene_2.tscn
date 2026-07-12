@@ -17,8 +17,8 @@
 [ext_resource type="AudioStream" uid="uid://bif3kgnklcchq" path="res://assets/audio/I dont see how.ogg" id="13_0xl4q"]
 [ext_resource type="AudioStream" uid="uid://c6oqloetan5id" path="res://assets/audio/oh hes a greeeaaatttt person.ogg" id="14_oyiwn"]
 [ext_resource type="Texture2D" uid="uid://doq3bkx2ikxu7" path="res://assets/art/minimized_policerecord_default.png" id="15_oyiwn"]
-[ext_resource type="Texture2D" uid="uid://ckn4mq5pw8ese" path="res://assets/art/minimized_policerecord_hover.png" id="16_8igo0"]
 [ext_resource type="Script" uid="uid://cjbk82l4m11ys" path="res://scenes/police_record_hara.gd" id="17_i44rj"]
+[ext_resource type="Texture2D" uid="uid://bg1e3t6a3jrf3" path="res://assets/art/minimized_policerecord_hover2.png" id="17_lkfw3"]
 [ext_resource type="Texture2D" uid="uid://d0q30g8llaf8k" path="res://assets/art/CriminalRecordsHarakore.png" id="19_lkfw3"]
 [ext_resource type="Texture2D" uid="uid://dwoqyubfkp05t" path="res://assets/art/ArrowRightDefault.png" id="21_lkfw3"]
 [ext_resource type="Texture2D" uid="uid://cmsjgb7o40ckd" path="res://assets/art/ArrowRightOutlinedDark.png" id="22_xaq16"]
@@ -103,7 +103,7 @@ offset_top = 959.0
 offset_right = 1160.0
 offset_bottom = 1079.0
 texture_normal = ExtResource("15_oyiwn")
-texture_hover = ExtResource("16_8igo0")
+texture_hover = ExtResource("17_lkfw3")
 script = ExtResource("17_i44rj")
 zoom_texture = ExtResource("19_lkfw3")
 
