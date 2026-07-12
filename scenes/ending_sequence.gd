@@ -7,7 +7,8 @@ var innocent_images: Array[Texture2D] = [
 	preload("res://assets/art/InnocentPaper2.png"),
 	preload("res://assets/art/InnocentPaper3.png"),
 	preload("res://assets/art/InnocentPaper4.png"),
-	preload("res://assets/art/didyoumaketherightchoice.png")
+	preload("res://assets/art/didyoumaketherightchoice.png"),
+	preload("res://assets/art/IMG_2311.jpg")
 ]
 var guilty_images: Array[Texture2D] = [
 	preload("res://assets/art/GuiltyPaper1.png"),
@@ -15,7 +16,8 @@ var guilty_images: Array[Texture2D] = [
 	preload("res://assets/art/GuiltyPaper3.png"),
 	preload("res://assets/art/GuiltyPaper4.png"),
 	preload("res://assets/art/GuiltyPaper5.png"),
-	preload("res://assets/art/didyoumaketherightchoice.png")
+	preload("res://assets/art/didyoumaketherightchoice.png"),
+	preload("res://assets/art/IMG_2312.jpg")
 ]
 
 @export var fade_duration: float = 1.0

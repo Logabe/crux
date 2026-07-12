@@ -7,6 +7,7 @@ func _ready() -> void:
 	next_arrow.visible = false
 	progress_label.text = "0/%d" % required_clicks
 	ClickTracker.first_click_registered.connect(_on_first_click_registered)
+	Notebook.add_auto_note("How hated is the victim?")
 
 func next():
 	$AnimationPlayer.play("outro")
@@ -14,7 +15,7 @@ func next():
 	Globals.go_to_next()
 
 
-@export var required_clicks: int = 2
+@export var required_clicks: int = 4
 @onready var progress_label: Label = $ProgressLabel
 @onready var next_arrow: TextureButton = $TransitionButton
 

@@ -146,6 +146,7 @@ offset_top = 429.0
 offset_right = 1248.0
 offset_bottom = 465.0
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
 text = "Harakore Smith is accused of the murder of Rodney Bentley"
 label_settings = SubResource("LabelSettings_65f5o")
 horizontal_alignment = 1
